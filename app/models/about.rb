@@ -1,3 +1,5 @@
+# About is a content
 class About < Content
-    content_attr :test, :string
+  content_attr :body, :string
+
 end
