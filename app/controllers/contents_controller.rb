@@ -56,5 +56,4 @@ class ContentsController < ApplicationController
     @content_type ||= params[:content_type].classify
   end
   helper_method :content_type
-
 end
