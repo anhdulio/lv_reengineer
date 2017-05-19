@@ -1,5 +1,4 @@
 class WebsiteController < ApplicationController
-  layout 'website'
 
   def homepage
   end
