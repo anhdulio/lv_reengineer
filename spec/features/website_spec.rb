@@ -7,6 +7,6 @@ RSpec.feature 'Loc Van Website', type: :feature do
     expect(page).to have_selector('.slider')
     expect(page).to have_selector('.price-quote')
     expect(page).to have_selector('.client')
-    expect(page).to have_selector('.footer')
+    expect(page).to have_selector('.page-footer')
   end
 end
