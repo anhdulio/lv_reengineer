@@ -1,4 +1,4 @@
-<div id='homepage-header'>
+<div class='header'>
     <div class="container">
         <!-- Dropdown Structure for Nav Bar-->
         <ul id="dropdown1" class="dropdown-content">
@@ -10,7 +10,7 @@
         <nav>
             <div class="nav-wrapper">
             <a href="#" class="brand-logo">
-            <%= image_tag 'brand/lv_logo.png', size: '50x50', alt: 'Loc Van Rice' %></a>
+            <%= image_tag 'brand/lv_logo.png', alt: 'Loc Van Rice' %></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="sass.html">Market</a></li>
                 <li><a href="badges.html">About</a></li>
@@ -30,5 +30,30 @@
             </ul>
             </div>
         </nav>
+        <div class="header-title">
+            <h1>Introduction to Loc Van</h1>
+            <h4 class="light">we produce awesome rice</h4>
+        </div>
     </div>
 </div>
+
+<% if @filter_bar == true %>
+<div class="filter-bar">
+    <div class="container">
+        <div class="row">
+            <ul class="tabs">
+                <li class="tab"><a href="#test1" class="active">all</a></li>
+                <li class="tab"><a href="#test2">Filter 2</a></li>
+                <li class="tab"><a href="#test3">Filter 3</a></li>
+                <li class="tab"><a href="#test4">Filter 4</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="test1" class="col s12">Test 1</div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+    <div id="test4" class="col s12">Test 4</div>
+</div>
+<% end %>

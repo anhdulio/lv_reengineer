@@ -1,6 +1,37 @@
 // Place all the styles related to the Website controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.slider {
-  color: red;
+
+// Header with background pattern
+.header {
+  min-height: 50vh;
+  background-image: url(asset-path("brand/agri_pattern.png"));
+  img {
+    max-height: 100%;
+  }
+  .container {
+      min-height: 35vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .header-title {
+    text-align: center;
+    color: white;
+  }
+}
+
+// Filter bar for blog-type pages
+.filter-bar {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.50);
+  background-color: $primary-color-dark;
+  .tabs {
+    background-color: transparent;
+    .tab a {
+      color: white;
+    };
+    .indicator {
+      background-color: white;
+    }
+  }
 }
