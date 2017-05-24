@@ -100,20 +100,11 @@
 // Search bar
 #nav-search-desktop {
   .input-field {
-    margin: 0;
-    height: 100%;
-
     input {
       height: 100%;
       font-size: 14px;
       border: none;
       color: transparent;
-
-      &:focus, &[type=text]:valid, &[type=password]:valid,
-      &[type=email]:valid, &[type=url]:valid, &[type=date]:valid {
-        border: none;
-        box-shadow: none;
-      }
     }
 
     label {
@@ -144,29 +135,5 @@
       transition-duration: 200ms;
     }
 
-  }
-
-  ::-webkit-input-placeholder {
-    color: white;
-    text-align: right;
-    padding-right: 15%;
-  }
-
-  :-moz-placeholder { /* Firefox 18- */
-    color: white;
-    text-align: right;
-    padding-right: 15%;
-  }
-
-  ::-moz-placeholder {  /* Firefox 19+ */
-    color: white;
-    text-align: right;
-    padding-right: 15%;
-  }
-
-  :-ms-input-placeholder {
-    color: white;
-    text-align: right;
-    padding-right: 15%;
   }
 }
