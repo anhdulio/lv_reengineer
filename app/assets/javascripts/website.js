@@ -5,5 +5,7 @@ $(document).ready(function(){
   $('.slider').slider({
     indicators: false,
     height: sliderheight,
-    });
+  });
+  $('.carousel').carousel();
+  $(".button-collapse").sideNav();
 })

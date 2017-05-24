@@ -25,7 +25,6 @@
 }
 
 // Footer with background pattern
-
 .page-footer {
   background-image: url(asset-path("brand/agri_pattern.png"));
   .footer-copyright {
@@ -58,12 +57,6 @@
       background-color: white;
     }
   }
-}
-
-// Slider for image display
-
-.slider {
-  height: 100vmin;
 }
 
 // Price Quote
@@ -102,4 +95,78 @@
       }
     }
   };
+}
+
+// Search bar
+#nav-search-desktop {
+  .input-field {
+    margin: 0;
+    height: 100%;
+
+    input {
+      height: 100%;
+      font-size: 14px;
+      border: none;
+      color: transparent;
+
+      &:focus, &[type=text]:valid, &[type=password]:valid,
+      &[type=email]:valid, &[type=url]:valid, &[type=date]:valid {
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    label {
+      top: 0;
+      right: 0;
+      left: auto;
+
+      i {
+        color: rgba(255,255,255,1);
+        transition: color .3s;
+      }
+      &.active i { color: $secondary-color; }
+    }
+  }
+  .input-field input[type=search] {
+    display: block;
+    line-height: inherit;
+    background-color: transparent;
+    padding-left: 0px;
+    width: 50px;
+
+    &:focus {
+      background-color: $input-background;
+      border: 0;
+      box-shadow: none;
+      color: #444;
+      width: 100%;
+      transition-duration: 200ms;
+    }
+
+  }
+
+  ::-webkit-input-placeholder {
+    color: white;
+    text-align: right;
+    padding-right: 15%;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: white;
+    text-align: right;
+    padding-right: 15%;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: white;
+    text-align: right;
+    padding-right: 15%;
+  }
+
+  :-ms-input-placeholder {
+    color: white;
+    text-align: right;
+    padding-right: 15%;
+  }
 }
