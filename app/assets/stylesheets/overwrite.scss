@@ -22,9 +22,9 @@ $grey-dark: #262F3B;
 
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
-$h1-fontsize: calc(10px + 3.9vmin);
-$h2-fontsize: calc(10px + 2.2vmin);
-$h3-fontsize: 2.92rem !default;
-$h4-fontsize: calc(10px + 2.2vmin);
-$h5-fontsize: calc(10px + 0.75vmin) !default;
-$h6-fontsize: 1rem !default;
+$h1-fontsize: calc(10px + 6.8vmin); //56px
+$h2-fontsize: calc(9px + 5.8vmin);  //48px
+$h3-fontsize: calc(6px + 4.4vmin);  //36px
+$h4-fontsize: calc(6px + 3.6vmin);  //30px
+$h5-fontsize: calc(5px + 2.8vmin);  //24px
+$h6-fontsize: calc(5px + 2.2vmin);  //20px

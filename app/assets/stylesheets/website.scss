@@ -65,3 +65,41 @@
 .slider {
   height: 100vmin;
 }
+
+// Price Quote
+
+.ldashboard {
+  .lcards {
+    font-size: 14px;
+    display: flex;
+    flex-flow: row wrap;
+    .lcard {
+      flex: 1 1 220px;
+      height: 138px;
+      display: flex;
+      flex-flow: column nowrap;
+      margin-bottom: 3px;
+      border-right: solid 3px white;
+      .ltop {
+        flex: 0 0 86px;
+        background-color: $secondary-color;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        .lprice {
+          font-size: 24px;
+          padding-right: 40px;
+        };
+        .valign-wrapper {
+          justify-content: flex-end;
+          padding-right: 40px;
+        }
+      };
+      .lbot {
+        flex: 1 1 auto;
+        background-color: $secondary-color-dark;
+        padding-left: 10px;
+      }
+    }
+  };
+}
