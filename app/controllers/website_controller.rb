@@ -4,7 +4,6 @@ class WebsiteController < ApplicationController
   @filter_bar = false
 
   def homepage
-    @filter_bar = true
   end
 
   def about
