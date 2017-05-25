@@ -20,7 +20,9 @@ $grey-dark: #262F3B;
 // 20. Typography
 // ==========================================================================
 
-$off-black: rgba(0, 0, 0, 0.87) !default;
+$roboto-font-path: "roboto/";
+
+$off-black: rgba(0, 0, 0, 0.87) ;
 // Header Styles
 $h1-fontsize: calc(10px + 6.8vmin); //56px
 $h2-fontsize: calc(9px + 5.8vmin);  //48px
