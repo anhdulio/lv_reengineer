@@ -1,10 +1,20 @@
-<%= render 'header' %>
-<%= render 'shared/fullslider' %>
-<div class='container price-quote'>
-<%= render 'shared/dashboard_card' %>
+<div id='homepage-header'>
+  <%= render 'header' %>
+<div>
+
+<div id='features'>
+  <%= render 'shared/fullslider' %>
+</div>
+
+<div class='container' id='price-quote'>
+  <%= render 'shared/dashboard_card' %>
 </div>
 <p></p>
-<div class='container'>
-<%= render 'shared/carousel' %>
+
+<div class='container' id='our-clients'>
+  <%= render 'shared/carousel' %>
 </div>
-<%= render 'footer' %>
+
+<div id='homepage-footer'>
+  <%= render 'footer' %>
+</div>

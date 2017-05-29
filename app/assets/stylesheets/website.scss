@@ -25,7 +25,7 @@
 }
 
 // Footer with background pattern
-.page-footer {
+.footer {
   background-image: url(asset-path("brand/agri_pattern.png"));
   .footer-copyright {
     background-color: $primary-color-dark;
@@ -135,5 +135,15 @@
       transition-duration: 200ms;
     }
 
+  }
+}
+
+// Content section
+.contents {
+  .card.large {
+    height: 500px;
+  }
+  .card.large > .card-image {
+    max-height: 37.5%;
   }
 }
