@@ -10,14 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170518061525) do
+ActiveRecord::Schema.define(version: 20170529040844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contents", force: :cascade do |t|
-    t.string   "type"
     t.string   "title"
+    t.string   "body"
+    t.string   "short"
+    t.boolean  "featured"
+    t.string   "type"
     t.string   "slug"
     t.json     "payload"
     t.integer  "user_id"
@@ -32,10 +35,13 @@ ActiveRecord::Schema.define(version: 20170518061525) do
     t.index ["user_id"], name: "index_contents_on_user_id", using: :btree
   end
 
-  create_table "tags", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "prices", force: :cascade do |t|
+    t.integer  "price"
+    t.datetime "updated_date"
+    t.integer  "product_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["product_id"], name: "index_prices_on_product_id", using: :btree
   end
 
 end

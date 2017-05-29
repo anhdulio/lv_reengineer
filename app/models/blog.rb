@@ -1,3 +1,3 @@
 class Blog < Content
-    has_and_belongs_to_many :tags
+  content_attr :main_image, :string
 end

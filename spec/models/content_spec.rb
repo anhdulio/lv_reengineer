@@ -6,3 +6,10 @@ RSpec.describe About, type: :model do
     expect(about).to be_valid
   end
 end
+
+RSpec.describe Blog, type: :model do
+  it 'has a valid factory' do
+    blog = build(:blog)
+    expect(blog).to be_valid
+  end
+end

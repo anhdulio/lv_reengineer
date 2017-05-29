@@ -2,8 +2,12 @@
 class CreateContents < ActiveRecord::Migration[5.0]
   def change
     create_table :contents do |t|
-      t.string :type, index: true
       t.string :title
+      t.string :body
+      t.string :short
+      t.boolean :featured
+
+      t.string :type, index: true
       t.string :slug, index: true
       t.json :payload
       t.integer :user_id, index: true
