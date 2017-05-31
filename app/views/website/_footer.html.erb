@@ -1,46 +1,32 @@
 <footer class="footer">
       <div class="row">
         <div class="col l3 m6 s12">
-              <h5 class="white-text">Contact Info</h5>
+              <h5 class="white-text"><%= t('website.homepage.footer.contact_title') %></h5>
               <ul>
-                <li>DT 852 Tan Duong Lai Vung Dong Thap</li>
-                <li>+84 939 024 061</li>
-                <li>locvanrice@gmail.com</li>
+                <li><%= t('website.homepage.footer.contact_address') %></li>
+                <li><%= t('website.homepage.footer.contact_phone') %></li>
+                <li><%= t('website.homepage.footer.contact_email') %></li>
               </ul>
         </div>
-        <div class="col l3 m6 s12">
-              <h5 class="white-text">Social Media</h5>
-              <ul>
-                <li><a class="white-text strong" href="#!">Facebook</a></li>
-                <li><a class="white-text strong" href="#!">Skype</a></li>
-                <li><a class="white-text strong" href="#!">Zalo</a></li>
-                <li><a class="white-text strong" href="#!">weChat</a></li>
-              </ul>
-        </div>
-        <div class="col l3 m6 hide-on-small-only">
-              <h5 class="white-text">Product Category 1</h5>
-              <ul>
-                <li><a class="white-text strong" href="#!">Link 1</a></li>
-                <li><a class="white-text strong" href="#!">Link 2</a></li>
-                <li><a class="white-text strong" href="#!">Link 3</a></li>
-                <li><a class="white-text strong" href="#!">Link 4</a></li>
-              </ul>
-        </div>
-        <div class="col l3 m6 hide-on-small-only">
-              <h5 class="white-text">Product Category 2</h5>
-              <ul>
-                <li><a class="white-text strong" href="#!">Link 1</a></li>
-                <li><a class="white-text strong" href="#!">Link 2</a></li>
-                <li><a class="white-text strong" href="#!">Link 3</a></li>
-                <li><a class="white-text strong" href="#!">Link 4</a></li>
-              </ul>
-        </div>
+
+        <% @menubar[:menu].each do |key, items| %>
+          <% if items[:sub] %>
+            <div class="col l3 m6 hide-on-small-only">
+              <h5 class="white-text"><%= items[:title] %></h5>
+                <ul>
+                  <% items[:sub].each do |item| %>
+                    <li><a class='white-text strong' href='<%= "#{key}##{item[0].tableize}" %>'><%= item[0] %></a></li>
+                  <% end %>
+                </ul>
+            </div>
+          <% end %>
+        <% end%>
 
       </div>
       <div class="footer-copyright">
         <div class="container center-align">
           <b class="white-text">
-            ©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer & Exporter
+            <%= t('website.homepage.footer.copy_right') %>
           </b>
         </div>
       </div>

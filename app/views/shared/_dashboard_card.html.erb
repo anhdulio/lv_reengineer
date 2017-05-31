@@ -1,14 +1,29 @@
 <div class='ldashboard'>
-  <h3 class='center-align'>This gonna be my title</h3>
-  <div class='center-align'>This gonna be my subtitle</div>
+  <h3 class='center-align'><%= "#{Date.current} #{t(:title, scope: [:website, :homepage, :price])}" %></h3>
+  <h5 class='center-align'><%= "#{t(:subtitle, scope: [:website, :homepage, :price])}" %></h5>
   <div class='lcards'>
-    <% 8.times do %>
+    <% @products.each do |product| %>
     <div class='lcard'>
       <div class='ltop'>
-        <div class='lprice right-align'>5,600 VND/kgs</div>
-        <div class='valign-wrapper'><i class='material-icons red-text text-darken-2'>trending_down</i>200 VND</div>
+        <% if I18n.locale == :en %>
+            <div class='lprice right-align'> <%= product.latest_price %> USD/tons </div>
+            <% diff = product.latest_price - product.l7d_price.to_i %>
+            <% if diff > 0 %>
+                    <div class='valign-wrapper'><i class='material-icons green-text text-darken-2'>trending_up</i><%= diff.abs %></div>
+            <% else %>
+                    <div class='valign-wrapper'><i class='material-icons red-text text-darken-2'>trending_down</i><%= diff.abs %></div>
+            <% end %>
+          <% else %>
+            <div class='lprice right-align'> <%= (product.latest_price * @ex[:latest])/1000 %> VND/kgs </div>
+            <% diff = product.latest_price*@ex[:latest] - product.l7d_price.to_i*@ex[:l7d] %>
+            <% if diff > 0 %>
+                    <div class='valign-wrapper'><i class='material-icons green-text text-darken-2'>trending_up</i><%= diff.abs %></div>
+            <% else %>
+                    <div class='valign-wrapper'><i class='material-icons red-text text-darken-2'>trending_down</i><%= diff.abs %></div>
+            <% end %>
+        <% end %>
       </div>
-      <div class='lbot valign-wrapper'>Vietnam 5% Broken Rice</div>
+      <div class='lbot valign-wrapper'><%= product.title %></div>
     </div>
     <% end %>
   </div>

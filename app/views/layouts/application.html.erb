@@ -18,5 +18,8 @@
 
   <body>
     <%= yield %>
+    <% if @contact_widget %>
+      <script src="https://mssg.me/widget/locvanrice" async></script>
+    <% end %>
   </body>
 </html>

@@ -1,25 +1,13 @@
-  <div class="slider">
-    <ul class="slides">
+<div class="slider">
+  <ul class="slides">
+    <% @features.each do |feature| %>
       <li>
-        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <%= image_tag feature.main_image %>
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light">Here's our small slogan.</h5>
+          <h3><%= feature.title %></h3>
+          <h5><%= feature.short %></h5>
         </div>
       </li>
-      <li>
-        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
+    <% end %>
+  </ul>
+</div>
