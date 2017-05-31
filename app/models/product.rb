@@ -1,5 +1,7 @@
 # Product is a content
 class Product < Content
+  #FriendlyId for SEO URL
+  extend FriendlyId
   attr_accessor :latest_price, :l7d_price
   content_attr :main_image, :string
   has_many :prices
