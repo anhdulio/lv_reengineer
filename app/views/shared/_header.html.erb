@@ -5,7 +5,7 @@
             <ul id='<%= key %>-dropdown' class='dropdown-content'>
                 <% if value[:sub]%>
                     <% value[:sub].each do |item| %>
-                        <li><a href='<%= "#{key}##{item[0].tableize}" %>'><%= item[0] %></a></li>
+                        <li><a href='<%= "/#{key}##{item[0].parameterize}" %>'><%= item[0] %></a></li>
                     <% end %>
                 <% end %>
             </ul>
@@ -16,7 +16,7 @@
             <ul id='<%= key %>-dropdown-mobile' class='dropdown-content'>
                 <% if value[:sub]%>
                     <% value[:sub].each do |item| %>
-                        <li><a href='<%= "#{key}##{item[0].tableize}" %>'><%= item[0] %></a></li>
+                        <li><a href='<%= "/#{key}##{item[0].parameterize}" %>'><%= item[0] %></a></li>
                     <% end %>
                 <% end %>
             </ul>

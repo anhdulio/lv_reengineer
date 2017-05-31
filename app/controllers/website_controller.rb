@@ -1,8 +1,8 @@
 class WebsiteController < ApplicationController
+  include MenuConcern
   before_action :set_menubar
   # add filter bar to template, false by default
-  @filter_bar = false
-  @contact_widget = false
+
 
   def homepage
     @header_info = { title: t('website.homepage.header.title'), subtitle: t('website.homepage.header.subtitle') }
@@ -24,6 +24,7 @@ class WebsiteController < ApplicationController
     @filter_bar = true
     @contents = get_contents(:about)
     @cats = About.distinct.pluck(:category)
+    @contact_widget = true
     render 'contents'
   end
 
@@ -32,11 +33,13 @@ class WebsiteController < ApplicationController
     @filter_bar = true
     @contents = get_contents(:blog)
     @cats = Blog.distinct.pluck(:category)
+    @contact_widget = true
     render 'contents'
   end
 
 
   def market
+    @contact_widget = true
   end
 
   def products
@@ -45,47 +48,13 @@ class WebsiteController < ApplicationController
     @contents = get_contents(:product)
     @cats = Product.distinct.pluck(:category)
     render 'contents'
-  end
-
-  def content
-    @filter_bar = false
+    @contact_widget = true
   end
 
   private
 
   def get_contents(content_type)
     Content.where(type: content_type.to_s.capitalize)
-  end
-
-  def set_menubar
-    logo_url = 'brand/loc_van_rice_logo.png'
-    @acat = About.all.select(:category).distinct.collect { |p| [p.category] }
-    @bcat = Blog.all.select(:category).distinct.collect { |p| [p.category] }
-    @pcat = Product.all.select(:category).distinct.collect { |p| [p.category] }
-
-    case I18n.locale
-    when :vi
-      market_url = emarket_path
-      abouts_url = eabouts_path
-      products_url = eproducts_path
-      blogs_url = eblogs_path
-    when :en
-      market_url = emarket_path
-      abouts_url = eabouts_path
-      products_url = eproducts_path
-      blogs_url = eblogs_path
-    end
-
-    menu = {
-      logo: logo_url,
-      menu: {
-        market: { title: t('website.menubar.market'), url: market_url, sub: nil },
-        abouts: { title: t('website.menubar.about'), url: abouts_url, sub: @acat },
-        blogs: { title: t('website.menubar.blog'), url: blogs_url, sub: @bcat },
-        products: { title: t('website.menubar.product'), url: products_url, sub: @pcat }
-      }
-    }
-    @menubar = menu
   end
 
   def get_clients(numbers)

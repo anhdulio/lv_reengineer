@@ -15,7 +15,7 @@
               <h5 class="white-text"><%= items[:title] %></h5>
                 <ul>
                   <% items[:sub].each do |item| %>
-                    <li><a class='white-text strong' href='<%= "#{key}##{item[0].tableize}" %>'><%= item[0] %></a></li>
+                    <li><a class='white-text strong' href='<%= "/#{key}##{item[0].parameterize}" %>'><%= item[0] %></a></li>
                   <% end %>
                 </ul>
             </div>

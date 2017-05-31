@@ -5,7 +5,6 @@ class Content < ApplicationRecord
   friendly_id :title, :use => :slugged
 
   scope :published, (-> { where('published_at <= ?', Time.zone.now) })
-  validates_uniqueness_of :slug, message: "slug must be unique"
 
   def self.content_attr(attr_name, attr_type = :string)
     content_attributes[attr_name] = attr_type

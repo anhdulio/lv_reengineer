@@ -1,12 +1,18 @@
 # Admin Content Controller
 class ContentsController < ApplicationController
+  include MenuConcern
+
   before_action :set_content, only: %i[show edit update destroy]
+  before_action :set_menubar
 
   def index
     @contents = Content.where(type: content_type)
   end
 
-  def show; end
+  def show
+    @header_info = { title: @content.title, subtitle: @content.short }
+    @contact_widget = true
+  end
 
   def new
     @content = Content.new(type: content_type)
@@ -43,7 +49,7 @@ class ContentsController < ApplicationController
   private
 
   def set_content
-    @contents = Content.find(params[:id])
+    @content = Content.friendly.find(params[:id])
   end
 
   def content_params

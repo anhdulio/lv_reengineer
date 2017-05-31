@@ -27,6 +27,8 @@ en:
       about: 'About'
       blog: 'Blog'
       product: 'Product'
+    filterbar:
+      readmore: 'Read More ...'
     homepage:
       header:
         title: 'Introduction to Loc Van'
