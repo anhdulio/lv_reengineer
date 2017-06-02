@@ -9,7 +9,7 @@ class Price < ApplicationRecord
   end
 
   def self.get_l7d_exchange
-    Price.where(updated_date: (Time.current - 7.days)..Time.current).average(:exchange_rate)
+    Price.where(updated_date: (Time.current - 7.days)..Time.current).average(:exchange_rate).to_i
   end
 
 end

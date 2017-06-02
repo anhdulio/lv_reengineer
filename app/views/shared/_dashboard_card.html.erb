@@ -15,7 +15,7 @@
             <% end %>
           <% else %>
             <div class='lprice right-align'> <%= (product.latest_price * @ex[:latest])/1000 %> VND/kgs </div>
-            <% diff = product.latest_price*@ex[:latest] - product.l7d_price.to_i*@ex[:l7d] %>
+            <% diff = (product.latest_price*@ex[:latest] - product.l7d_price.to_i*@ex[:l7d])/1000 %>
             <% if diff > 0 %>
                     <div class='valign-wrapper'><i class='material-icons green-text text-darken-2'>trending_up</i><%= diff.abs %></div>
             <% else %>

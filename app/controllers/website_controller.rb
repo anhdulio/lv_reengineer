@@ -1,8 +1,10 @@
 class WebsiteController < ApplicationController
   include MenuConcern
   before_action :set_menubar
+  before_action :set_locale
   # add filter bar to template, false by default
 
+  def admin;end
 
   def homepage
     @header_info = { title: t('website.homepage.header.title'), subtitle: t('website.homepage.header.subtitle') }
@@ -39,7 +41,15 @@ class WebsiteController < ApplicationController
 
 
   def market
+    @header_info = { title: t('website.blogs.header.title'), subtitle: t('website.blogs.header.subtitle') }
     @contact_widget = true
+    @products = []
+    @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
+
+    Product.find_each do |product|
+      product.update_product_price
+      @products << product
+    end
   end
 
   def products
@@ -71,6 +81,10 @@ class WebsiteController < ApplicationController
 
   def website_params
     params.permit(:filter)
+  end
+
+  def set_locale
+    I18n.locale = :vi
   end
 
 end
