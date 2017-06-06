@@ -1,12 +1,40 @@
 <footer class="footer">
       <div class="row">
         <div class="col l3 m6 s12">
-              <h5 class="white-text"><%= t('website.homepage.footer.contact_title') %></h5>
-              <ul>
-                <li><%= t('website.homepage.footer.contact_address') %></li>
-                <li><%= t('website.homepage.footer.contact_phone') %></li>
-                <li><%= t('website.homepage.footer.contact_email') %></li>
-              </ul>
+              <div class='card-panel'>
+                <div class='user_img2'>
+                  <span><%= image_tag 'socials/anhdu.png', class: 'circle' %></span>
+                  <p class="card-title medium">Anh Du</p>
+                  <p class="card-title"><%= t('website.homepage.footer.contact_phone') %></p>
+                  <p class="card-title"><%= t('website.homepage.footer.contact_email') %></p>
+                </div>
+                <div class="card-content contacts">
+                  <a href="http://t.me/anhdulio" class="telegram">
+                        <%= image_tag "socials/telegram.svg" %>
+                        <span>Telegram</span>
+                  </a>
+                  <a href="http://m.me/anhdulio" class="messenger">
+                        <%= image_tag "socials/messeger.svg" %>
+                        <span>Messenger</span>
+                  </a>
+                  <a href="skype:anhdulio?chat" class="skype">
+                        <%= image_tag "socials/skype.svg" %>
+                        <span>Skype</span>
+                  </a>
+                  <a href="whatsapp://send?text=hey&amp;phone=84939024961" class="whatsapp">
+                        <%= image_tag "socials/whatsapp.svg" %>
+                        <span>WhatsApp</span>
+                  </a>
+                  <a href="viber://add?number=84939024961" class="viber">
+                        <%= image_tag "socials/viber.svg" %>
+                        <span>Viber</span>
+                  </a>
+                  <a href="http://zalo.me/0939024961" class="zalo">
+                        <%= image_tag "socials/zalo.png" %>
+                        <span>Zalo</span>
+                  </a>
+                </div>
+              </div>
         </div>
 
         <% @menubar[:menu].each do |key, items| %>
@@ -26,7 +54,7 @@
       <div class="footer-copyright">
         <div class="container center-align">
           <b class="white-text">
-            <%= t('website.homepage.footer.copy_right') %>
+            <%= "#{t('website.homepage.footer.copy_right')} - #{t('website.homepage.footer.contact_address')}" %>
           </b>
         </div>
       </div>

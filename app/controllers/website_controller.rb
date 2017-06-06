@@ -84,7 +84,7 @@ class WebsiteController < ApplicationController
   end
 
   def set_locale
-    I18n.locale = :vi
+    I18n.locale = :en
   end
 
 end
