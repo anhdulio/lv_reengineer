@@ -2,8 +2,8 @@
 server '35.187.234.146', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:anhdulio/lv_reengineer.git'
-set :application,     'lvrice'
-set :user,            'anhdulio'
+set :application,     'lv_reengineer'
+set :user,            'anhdu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
