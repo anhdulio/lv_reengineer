@@ -32,7 +32,7 @@ require 'faker'
 gem 'simple_form'
 gem 'materialize-form'
 gem 'friendly_id', '~> 5.1.0'
-gem 'rails_safe_tasks', '~> 1.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
