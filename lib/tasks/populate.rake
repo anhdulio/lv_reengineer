@@ -1,6 +1,3 @@
-require 'factory_girl'
-require 'faker'
-
 namespace :db do
   desc "Populate the database with some sample data"
   task :populate, [:count] => [:environment] do |t, args|
