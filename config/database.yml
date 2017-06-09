@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: lv_reengineer_production
-  username: lvrices
-  password: anhdu12345
+  username: anhdu
+  password: <%= ENV['LV_REENGINEER_DATABASE_PASSWORD'] %>
