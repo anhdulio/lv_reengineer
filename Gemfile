@@ -26,8 +26,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-require 'factory_girl'
-require 'faker'
 
 gem 'simple_form'
 gem 'materialize-form'
