@@ -1,0 +1,13 @@
+<div class="slider">
+  <ul class="slides">
+    <% @features.each do |feature| %>
+      <li><a href="<%= content_path(feature, content_type: feature.type.tableize) %>">
+        <%= image_tag feature.main_image %>
+        <div class="caption center-align">
+          <h3><%= feature.title %></h3>
+          <h5><%= feature.short %></h5>
+        </div>
+      </a></li>
+    <% end %>
+  </ul>
+</div>

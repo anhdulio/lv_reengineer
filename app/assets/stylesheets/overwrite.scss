@@ -1,0 +1,32 @@
+// 1. Colors
+// ==========================================================================
+
+$primary-color: #00E676;
+$primary-color-dark: #06570B;
+$primary-color-light: #5DFFA2;
+
+$secondary-color: #FFC200;
+$secondary-color-dark: #C89100;
+$secondary-color-light: #FFF43C;
+
+$success-color: $primary-color;
+$error-color: #EE544F;
+$link-color: #1A94FA;
+
+$grey-light: #E6ECF4;
+$grey-medium: #95A2B1;
+$grey-dark: #262F3B;
+
+// 20. Typography
+// ==========================================================================
+
+$roboto-font-path: "roboto/";
+
+$off-black: rgba(0, 0, 0, 0.87) ;
+// Header Styles
+$h1-fontsize: calc(10px + 6.8vmin); //56px
+$h2-fontsize: calc(9px + 5.8vmin);  //48px
+$h3-fontsize: calc(6px + 4.4vmin);  //36px
+$h4-fontsize: calc(6px + 3.6vmin);  //30px
+$h5-fontsize: calc(5px + 2.8vmin);  //24px
+$h6-fontsize: calc(5px + 2.2vmin);  //20px

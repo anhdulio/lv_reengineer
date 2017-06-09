@@ -1,5 +1,9 @@
 # Content Model
 class Content < ApplicationRecord
+  #FriendlyId for SEO URL
+  extend FriendlyId
+  friendly_id :title, :use => :slugged
+
   scope :published, (-> { where('published_at <= ?', Time.zone.now) })
 
   def self.content_attr(attr_name, attr_type = :string)

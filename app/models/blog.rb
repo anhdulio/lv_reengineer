@@ -1,3 +1,6 @@
 class Blog < Content
-    has_and_belongs_to_many :tags
+  #FriendlyId for SEO URL
+  extend FriendlyId
+
+  content_attr :main_image, :string
 end

@@ -12,8 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
 //= require turbolinks
+//= require materialize.min
+//= require materialize-form
 //= require_tree .
-
-$(function(){ $(document).foundation(); });

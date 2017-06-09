@@ -1,12 +1,29 @@
 # Admin Content Controller
 class ContentsController < ApplicationController
+  include MenuConcern
+
   before_action :set_content, only: %i[show edit update destroy]
+  before_action :set_menubar
 
   def index
     @contents = Content.where(type: content_type)
   end
 
-  def show; end
+  def update_price
+    prices = params[:prices]
+    exrate = params[:exrate]
+    prices.each do |id, price|
+      product = Product.find(id)
+      price = Price.new(updated_date: DateTime.now, price: price, exchange_rate: exrate, product: product)
+      price.save
+    end
+    redirect_to contents_path(:product), notice: "Prices have been updated"
+  end
+
+  def show
+    @header_info = { title: @content.title, subtitle: @content.short }
+    @contact_widget = true
+  end
 
   def new
     @content = Content.new(type: content_type)
@@ -17,8 +34,8 @@ class ContentsController < ApplicationController
   def create
     @content = Content.new(content_params)
 
-    if @contents.save
-      redirect_to specific_content_path(@contents), notice: 'Content was success
+    if @content.save
+      redirect_to specific_content_path(@content), notice: 'Content was success
       fully created.'
     else
       render :new
@@ -27,7 +44,7 @@ class ContentsController < ApplicationController
 
   def update
     if @content.update(content_params)
-      redirect_to specific_content_path(@contents), notice: 'Content was success
+      redirect_to specific_content_path(@content), notice: 'Content was success
       fully updated.'
     else
       render :edit
@@ -43,13 +60,13 @@ class ContentsController < ApplicationController
   private
 
   def set_content
-    @contents = Content.find(params[:id])
+    @content = Content.friendly.find(params[:id])
   end
 
   def content_params
-    allowed_attrs = %i[id type title category slug published_at tags]
+    allowed_attrs = %i[id type title short body category featured locale]
                     .concat(content_type.constantize.content_attributes.keys)
-    params.require(:Content).permit(*allowed_attrs)
+    params.require(:content).permit(*allowed_attrs)
   end
 
   def content_type
