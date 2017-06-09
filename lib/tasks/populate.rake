@@ -22,7 +22,3 @@ namespace :db do
     puts "Done!"
   end
 end
-
-['db:drop', 'db:reset', 'db:seed', 'db:populate'].each do |t|
-  Rake::Task[t].enhance ['skip_prod']
-end
