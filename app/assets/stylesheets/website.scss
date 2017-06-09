@@ -4,13 +4,13 @@
 
 // Header with background pattern
 .header {
-  min-height: 50vh;
+  min-height: 40vh;
   background-image: url(asset-path("brand/agri_pattern.png"));
   img {
     max-height: 100%;
   }
   .container {
-      min-height: 35vh;
+      min-height: 30vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -26,6 +26,7 @@
 
 // Footer with background pattern
 .footer {
+  margin-top: 100px;
   background-image: url(asset-path("brand/agri_pattern.png"));
   .footer-copyright {
     background-color: $primary-color-dark;
