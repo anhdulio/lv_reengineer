@@ -4,7 +4,9 @@ class WebsiteController < ApplicationController
   before_action :set_locale
   # add filter bar to template, false by default
 
-  def admin;end
+  def admin; end
+
+  def health; end
 
   def homepage
     @header_info = { title: t('website.homepage.header.title'), subtitle: t('website.homepage.header.subtitle') }
