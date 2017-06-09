@@ -82,4 +82,4 @@ production:
   <<: *default
   database: lv_reengineer_production
   username: anhdu
-  password: <%= ENV['LV_REENGINEER_DATABASE_PASSWORD'] %>
+  password: anhdu12345
