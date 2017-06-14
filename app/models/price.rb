@@ -5,11 +5,13 @@ class Price < ApplicationRecord
   validates_numericality_of :exchange_rate, only_integer: true, greater_than: 0, message: 'should be positive integer'
 
   def self.get_latest_exchange
-    Price.order(:updated_date).first.exchange_rate
+    if Price.order(:updated_date).first
+      Price.order(:updated_date).first.exchange_rate
+    end
   end
 
   def self.get_l7d_exchange
-    Price.where(updated_date: (Time.current - 7.days)..Time.current).average(:exchange_rate).to_i
+    Price.where(updated_date: (Time.current - 7.days)..Time.current).average(:exchange_rate).to_i ||= 0
   end
 
 end
