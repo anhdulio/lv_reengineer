@@ -24,4 +24,18 @@ class Content < ApplicationRecord
   def self.content_attributes
     @content_attributes ||= {}
   end
+
+  def self.get_values(attr_name, attr_type)
+    values = self.where(type: attr_type)
+    if values.size.zero?
+      return nil
+    else
+      value_string = ''
+      values.each do |value|
+        value_string += "#{value.method(attr_name).call},"
+      end
+      return value_string.split(",").map {|s| s.strip}.uniq
+    end
+  end
+
 end

@@ -6,7 +6,7 @@ class ContentsController < ApplicationController
   before_action :set_menubar
 
   def index
-    @contents = Content.where(type: content_type)
+    @contents = Content.where(type: contents_type)
   end
 
   def update_price
@@ -26,7 +26,7 @@ class ContentsController < ApplicationController
   end
 
   def new
-    @content = Content.new(type: content_type)
+    @content = Content.new(type: contents_type)
   end
 
   def edit; end
@@ -57,6 +57,11 @@ class ContentsController < ApplicationController
     yed.'
   end
 
+  def api
+    values = Content.get_values(params[:attribute], contents_type)
+    render json: values
+  end
+
   private
 
   def set_content
@@ -65,11 +70,11 @@ class ContentsController < ApplicationController
 
   def content_params
     allowed_attrs = %i[id type title short body category featured locale]
-                    .concat(content_type.constantize.content_attributes.keys)
+                    .concat(contents_type.constantize.content_attributes.keys)
     params.require(:content).permit(*allowed_attrs)
   end
 
-  def content_type
+  def contents_type
     @content_type ||= params[:content_type].classify
   end
   helper_method :content_type

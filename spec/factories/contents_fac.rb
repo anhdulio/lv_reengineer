@@ -20,8 +20,8 @@ FactoryGirl.define do
 
     factory :product, class: Product do
       main_image { Faker::LoremPixel.image("1336x384", false, 'nature') }
-      spec      { %w[mem deo thom] }
-      usage      { %w['gao tu thien' 'nguyen lieu'] }
+      spec      { 'mem, deo, thom' }
+      usage      { 'gao tu thien, nguyen lieu' }
       factory :product_with_prices do
         transient do
           prices_count 3

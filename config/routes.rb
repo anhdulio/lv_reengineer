@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   get 'san-pham-gao' => 'website#products', as: 'vproducts'
   get 'thi-truong-gao' => 'website#market', as: 'vmarket'
   scope '/:content_type' do
-    resources :contents
+    resources :contents do
+      collection do
+        get 'api/:attribute' => 'contents#api'
+      end
+    end
   end
 end

@@ -8,6 +8,14 @@
     = f.input :category, wrapper_html: { class: 'input-field' }
     = f.input :locale, wrapper_html: { class: 'input-field' }
     - @content.class.content_attributes.each do |attr_name, attr_type|
-      = f.input attr_name, as: attr_type
+      - case attr_name
+      - when :spec
+        = f.input attr_name, wrapper_html: { class: 'chips-spec' }
+        = f.hidden_field attr_name, as: attr_type
+      - when :usage
+        = f.input attr_name, wrapper_html: { class: 'chips-usage' }
+        = f.hidden_field attr_name, as: attr_type
+      - else
+        = f.input attr_name, as: attr_type
     = f.input :featured, wrapper_html: { class: 'switch' }
     = f.button :submit
