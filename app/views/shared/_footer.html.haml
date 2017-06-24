@@ -1,0 +1,39 @@
+.footer
+  .row
+    .col.l3.m6.s12
+      .card-panel
+        .user_img2
+          %span= image_tag 'socials/anhdu.png', class: 'circle'
+          %p.card-title.medium Anh Du
+          %p.card-title= t('website.homepage.footer.contact_phone')
+          %p.card-title= t('website.homepage.footer.contact_email')
+        .card-content.contacts
+          = link_to "http://t.me/anhdulio" do
+            = image_tag "socials/telegram.svg"
+            %span Telegram
+          = link_to "http://m.me/anhdulio" do
+            = image_tag "socials/messeger.svg"
+            %span Messenger
+          = link_to "skype:anhdulio?chat" do
+            = image_tag "socials/skype.svg"
+            %span Skype
+          = link_to "whatsapp://send?text=hey&amp;phone=84939024961" do
+            = image_tag "socials/whatsapp.svg"
+            %span WhatsApp
+          = link_to "viber://add?number=84939024961" do
+            = image_tag "socials/viber.svg"
+            %span Viber
+          = link_to "http://zalo.me/0939024961" do
+            = image_tag "socials/zalo.png"
+            %span Zalo
+    - @menubar[:menu].each do |key, items|
+      -if items[:sub]
+        .col.l3.m6.hide-on-small-only
+          %h5.white-text= items[:title]
+          %ul
+            - items[:sub].each do |item|
+              %li
+                = link_to(item[0], "/#{key}##{item[0].parameterize}", class: 'white-text strong')
+  .footer-copyright
+    .container.center-align
+      %b.white-text= "#{t('website.homepage.footer.copy_right')} - #{t('website.homepage.footer.contact_address')}"

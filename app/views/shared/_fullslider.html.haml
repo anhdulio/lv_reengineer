@@ -1,0 +1,10 @@
+- if @features.size
+  .slider
+    %ul.slides
+      - @features.each do |feature|
+        %li
+          = link_to content_path(feature, content_type: feature.type.tableize) do
+            = image_tag feature.main_image
+            .caption.center-align
+              %h3= feature.title
+              %h5= feature.short

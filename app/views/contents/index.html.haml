@@ -1,0 +1,28 @@
+.card.green.lighten-5
+  .card-content.green-text= notice
+
+.container
+  - if @contents.size != 0
+    %ul.collection
+      - @contents.each do |content|
+        %li.collection-item
+          = content.title
+          .secondary-content
+            = link_to 'show', specific_content_path(content), class: 'btn'
+            = link_to 'edit', edit_specific_content_path(content), class: 'btn'
+            = link_to 'delete', specific_content_path(content), class: 'btn', method: :delete, data: { confirm: 'Are you sure?'}
+  %p= link_to('Add Content', new_specific_content_path, class: 'btn')
+  - if @contents.size != 0
+    - if @contents.first.type.to_s.tableize == 'products'
+      = form_tag update_price_path do
+        - if @contents.last.prices.first
+          %h5= "Lastest update date : #{@contents.last.prices.order(updated_date: :desc).first.updated_date}"
+        - @contents.each do |product|
+          .input-field.inline
+            - product.update_product_price
+            %input{name: "prices[#{product.id}]", type: 'text', value: "#{product.latest_price}"}
+            %label{for: product.id}= product.title
+        .input-field
+          %input{name: 'exrate', type: 'text'}
+          %label{for: 'exrate'} USD - VND Rate
+        = submit_tag 'Save', class: 'btn'

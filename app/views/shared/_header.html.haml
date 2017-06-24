@@ -1,0 +1,68 @@
+.header
+    .container
+        -# Desktop Dropdown Structure for Nav Bar
+        -@menubar[:menu].each do |key, value|
+            %ul.dropdown-content{id: "#{key}-dropdown"}
+                - if value[:sub]
+                    - value[:sub].each do |item|
+                        %li
+                            = link_to(item[0], "/#{key}##{item[0].parameterize}")
+        -# Mobile Dropdown Structure for Nav Bar
+        -@menubar[:menu].each do |key, value|
+            %ul.dropdown-content{id: "#{key}-dropdown-mobile"}
+                - if value[:sub]
+                    - value[:sub].each do |item|
+                        %li
+                            = link_to(item[0], "/#{key}##{item[0].parameterize}")
+        -# Nav Bar
+        %nav#menu-bar
+            .nav-wrapper
+                = link_to root_path, class: 'brand-logo' do
+                    = image_tag @menubar[:logo]
+                -# Mobile Hamburger
+                = link_to '#', class: 'button-collapse', data: {activates: 'mobile'} do
+                    %i.material-icons menu
+                -# Desktop Nav Bar
+                %ul.right.hide-on-med-and-down#nav-mobile
+                    %li
+                        %form#nav-search-desktop
+                            .input-field
+                                %label.label-icon{for: 'searchme'}
+                                    %i.material-icons search
+                                %input#searchme{type: 'search', required: true}
+                    - @menubar[:menu].each do |key, value|
+                        - if value[:sub]
+                            %li
+                                = link_to "#!", class: 'dropdown-button', data: {activates: "#{key}-dropdown"} do
+                                    = value[:title]
+                                    %i.material-icons.right arrow_drop_down
+                        - else
+                            %li
+                                = link_to value[:title], value[:url]
+                -# Mobile Nav Bar
+                %ul.side-nav#mobile
+                    %li
+                        %form
+                            .input-field
+                                %input{id: 'search', type: 'search', required: true}
+                                %label.label-icon{for: 'search'}
+                                    %i.material-icons.black-text search
+                                %i.material-icons close
+                    - @menubar[:menu].each do |key, value|
+                        - if value[:sub]
+                            %li
+                                = link_to "#!", class: 'dropdown-button', data: {activates: "#{key}-dropdown-mobile"} do
+                                    = value[:title]
+                                    %i.material-icons.right arrow_drop_down
+                        - else
+                            %li
+                                = link_to value[:title], value[:url]
+        -# Header content
+        .header-title
+            %h1= @header_info[:title]
+            %h4= @header_info[:subtitle]
+
+
+- if @filter_bar == true
+    #filter-bar
+        = render 'shared/filter_bar'

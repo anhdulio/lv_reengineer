@@ -12,7 +12,7 @@ class WebsiteController < ApplicationController
     @header_info = { title: t('website.homepage.header.title'), subtitle: t('website.homepage.header.subtitle') }
     @features = Content.where(featured: true).take(3)
     @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
-    @clients = get_clients(10)
+    @clients = get_clients
     @products = []
     @contact_widget = true
 
@@ -69,18 +69,15 @@ class WebsiteController < ApplicationController
     Content.where(type: content_type.to_s.capitalize)
   end
 
-  def get_clients(numbers)
-    clients = []
-    numbers.times do |i|
-      client = {
-        url: "##{i}",
-        image: "http://lorempixel.com/300/300/business/#{i}/"
-      }
-      clients << client
-    end
-    return clients
+  def get_clients
+    clients = {
+      calofic: 'http://www.calofic.com.vn',
+      songhygialai: 'http://www.songhygialai.com',
+      vinacam: 'http://www.vinacam.com.vn',
+      vinhphat: 'http://www.vinhphat.com',
+      vinafood: 'http://www.vinafood2.com.vn'
+    }
   end
-
   def website_params
     params.permit(:filter)
   end

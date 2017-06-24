@@ -1,0 +1,23 @@
+.filter-bar
+    .container
+        .row
+            %ul.tabs
+                - @cats.each do |cat|
+                    %li.tab
+                        = link_to(cat, "##{cat.parameterize}")
+.container.contents
+    - @cats.each do |cat|
+        .col.s12{id: "#{cat.parameterize}"}
+            .row
+                - @contents.each do |content|
+                    - if content.category.parameterize == cat.parameterize
+                        .col.l4.m6.s12
+                            .card.medium.hoverable
+                                .card-image
+                                    = link_to(content_path(content.type, content.friendly_id))  do
+                                        = image_tag content.main_image
+                                .card-content
+                                    %span.card-title= content.title
+                                    %p= content.short
+                                .card-action
+                                    = link_to(t(:readmore, scope: [:website,:filterbar]), content_path(content.type, content.friendly_id))

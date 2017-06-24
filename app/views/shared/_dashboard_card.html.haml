@@ -1,0 +1,31 @@
+- if @products.size != 0
+  .ldashboard
+    %h3.center-align= "#{Date.current} #{t(:title, scope: [:website, :homepage, :price])}"
+    %h5.center-align= "#{t(:subtitle, scope: [:website, :homepage, :price])}"
+    .lcards
+      - @products.each do |product|
+        .lcard
+          .ltop
+            - if I18n.locale == :en
+              .lprice.right-align= "#{product.latest_price} USD/tons"
+              - diff = product.latest_price - product.l7d_price.to_i
+              - if diff > 0
+                .valign-wrapper
+                  %i.material-icons.green-text.text-darken-2 trending_up
+                  = diff.abs
+              - else
+                .valign-wrapper
+                  %i.material-icons.red-text.text-darken-2 trending_down
+                  = diff.abs
+            - else
+              .lprice.right-align= "#{(product.latest_price * @ex[:latest])/1000} VND/kgs"
+              - diff = (product.latest_price*@ex[:latest] - product.l7d_price.to_i*@ex[:l7d])/1000
+              - if diff > 0
+                .valign-wrapper
+                  %i.material-icons.green-text.text-darken-2 trending_up
+                  = diff.abs
+              - else
+                .valign-wrapper
+                  %i.material-icons.red-text.text-darken-2 trending_down
+                  = diff.abs
+          .lbot.valign-wrapper= product.title

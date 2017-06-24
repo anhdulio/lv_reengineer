@@ -1,0 +1,6 @@
+%h3.center-align= t(:title, scope: [:website,:homepage,:client])
+%h5.center-align= t(:subtitle, scope: [:website,:homepage,:client])
+.carousel
+  -@clients.each do |name, url|
+    = link_to(url, class: 'carousel-item', target: :_blank) do
+      = image_tag "content/client/#{name}.png"

@@ -1,9 +1,0 @@
-<h3 class='center-align'><%= t(:title, scope: [:website,:homepage,:client]) %></h3>
-<h5 class='center-align'><%= t(:subtitle, scope: [:website,:homepage,:client]) %></h5>
-<div class="carousel">
-<% @clients.each do |client| %>
-  <a class="carousel-item" href="<%= client[:url] %>">
-  <%= image_tag client[:image] %>
-  </a>
-<% end %>
-</div>

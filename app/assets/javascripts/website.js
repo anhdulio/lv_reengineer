@@ -4,4 +4,5 @@ $(document).on('turbolinks:load', function() {
   $('.slider').slider();
   $('.carousel').carousel();
   $(".button-collapse").sideNav();
+  Materialize.updateTextFields();
 })

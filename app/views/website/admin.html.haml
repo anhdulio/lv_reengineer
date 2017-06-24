@@ -1,0 +1,7 @@
+.container
+  %h1 Welcome to Admin Page
+  .collection.with-header
+    %h5.colection-header Available contents
+    = link_to('Abouts', contents_path(:about), class: 'collection-item')
+    = link_to('Blogs', contents_path(:blog), class: 'collection-item')
+    = link_to('Products', contents_path(:product), class: 'collection-item')
