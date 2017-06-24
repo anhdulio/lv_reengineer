@@ -4,6 +4,8 @@ class Product < Content
   extend FriendlyId
   attr_accessor :latest_price, :l7d_price
   content_attr :main_image, :string
+  content_attr :spec, :array
+  content_attr :usage, :array
   has_many :prices
 
   def update_product_price

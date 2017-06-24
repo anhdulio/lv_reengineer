@@ -3,6 +3,7 @@ class Content < ApplicationRecord
   #FriendlyId for SEO URL
   extend FriendlyId
   friendly_id :title, :use => :slugged
+  validates_uniqueness_of :slug
 
   scope :published, (-> { where('published_at <= ?', Time.zone.now) })
 
