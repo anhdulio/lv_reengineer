@@ -25,8 +25,8 @@
           data: values
           limit: Infinity
           minLength: 1
-
-      input.value = result.toString()
+      if result
+        input.value = result.toString()
 
     $('.chips-'+attribute).on 'chip.add', (e, chip) ->
       index = result.indexOf(chip.tag)
