@@ -12,10 +12,10 @@
       input.value.split(',').forEach (s) ->
         self_value['tag'] = s
         self_values.push(self_value)
-
-      result.forEach (s) ->
-        values[s] = null
-        return
+      if result
+        result.forEach (s) ->
+          values[s] = null
+          return
 
       $('.chips-'+attribute).material_chip
         secondaryPlaceholder: 'Enter a ' + attribute
