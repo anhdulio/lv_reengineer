@@ -43,7 +43,6 @@ class ContentsController < ApplicationController
   end
 
   def update
-    byebug
     if @content.update(content_params)
       redirect_to specific_content_path(@content), notice: 'Content was success
       fully updated.'
