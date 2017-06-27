@@ -12,5 +12,6 @@ module LvReengineer
   # -- all .rb files in that directory are automatically loaded.
   class Application < Rails::Application
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.i18n.default_locale = :vi
   end
 end
