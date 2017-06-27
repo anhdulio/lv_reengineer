@@ -5,16 +5,19 @@
     = f.input :title
     = f.input :short
     = f.input :body, as: :text
-    = f.association :category, collection: Category.where(content: params['content_type']), :label_method => :en, :value_method => :id, prompt: "Choose a Category"
-    = f.input :locale, collection: %i[vi en both], prompt: "Choose a Locale"
+    - category = @content.category.en if @content.category
+    = f.association :category, collection: Category.where(content: params['content_type']), :label_method => :en, :value_method => :id, prompt: "Choose a Category", selected: category
+    = f.input :locale, collection: %i[en vi both], prompt: "Choose a Locale"
     - @content.class.content_attributes.each do |attr_name, attr_type|
       - case attr_name
       - when :spec
+        Spec
         = f.input attr_name, wrapper_html: { class: 'chips-spec' }
-        = f.hidden_field attr_name, as: attr_type
+        = f.hidden_field attr_name, as: attr_type, id: 'hidden_spec'
       - when :usage
+        Usage
         = f.input attr_name, wrapper_html: { class: 'chips-usage' }
-        = f.hidden_field attr_name, as: attr_type
+        = f.hidden_field attr_name, as: attr_type, id: 'hidden_usage'
       - else
         = f.input attr_name, as: attr_type
     = f.input :featured, wrapper_html: { class: 'switch' }

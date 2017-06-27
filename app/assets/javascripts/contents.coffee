@@ -3,43 +3,43 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 @get_full_chips = (contents_type, attribute) ->
   $.getJSON '/' + contents_type + '/contents/api/' + attribute, (result) ->
-
     input = $('#content_'+attribute)[0]
-    values = {}
+    tags_string = $('#hidden_'+attribute)[0]
+    all_tag = {}
     self_value = {}
-    self_values = []
+    tags_array = []
+
     if input
-      input.value.split(',').forEach (s) ->
-        self_value['tag'] = s
-        self_values.push(self_value)
+      tags_string.value = input.value
+
       if result
         result.forEach (s) ->
-          values[s] = null
-          return
+          all_tag[s] = null
+
+      tags_string.value.split(',').forEach (s) ->
+        tags_array.push({'tag': s})
 
       $('.chips-'+attribute).material_chip
-        secondaryPlaceholder: 'Enter a ' + attribute
-        placeholder: '+ '+ attribute
-        data: self_values
+        placeholder: '+ tag'
+        data: tags_array
         autocompleteOptions:
-          data: values
+          data: all_tag
           limit: Infinity
           minLength: 1
-      if result
-        input.value = result.toString()
 
     $('.chips-'+attribute).on 'chip.add', (e, chip) ->
-      index = result.indexOf(chip.tag)
+      tags = tags_string.value.split(',')
+      index = tags.indexOf(chip.tag)
       if (index < 0)
-        result.push(chip.tag)
-      input.value = result.toString()
+        tags.push(chip.tag)
+      tags_string.value = tags.toString()
       return
 
     $('.chips-'+attribute).on 'chip.delete', (e, chip) ->
       index = result.indexOf(chip.tag)
       if (index > -1)
         result.splice(index, 1)
-      input.value = result.toString()
+      tags_string.value = result.toString()
       return
 
     return

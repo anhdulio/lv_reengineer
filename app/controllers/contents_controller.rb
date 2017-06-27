@@ -43,6 +43,7 @@ class ContentsController < ApplicationController
   end
 
   def update
+    byebug
     if @content.update(content_params)
       redirect_to specific_content_path(@content), notice: 'Content was success
       fully updated.'
@@ -69,7 +70,7 @@ class ContentsController < ApplicationController
   end
 
   def content_params
-    allowed_attrs = %i[id type title short body category featured locale]
+    allowed_attrs = %i[id type title short body category_id featured locale]
                     .concat(contents_type.constantize.content_attributes.keys)
     params.require(:content).permit(*allowed_attrs)
   end

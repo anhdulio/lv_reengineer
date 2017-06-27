@@ -6,6 +6,5 @@ $(document).on('turbolinks:load', function() {
   $('.slider').slider();
   $('.carousel').carousel();
   $(".button-collapse").sideNav();
-  $('.chips-usage').material_chip();
   Materialize.updateTextFields();
 })
