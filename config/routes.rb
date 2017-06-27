@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   get '/_ah/health' => 'website#health'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'website#homepage'
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   get 'gao-loc-van' => 'website#abouts', as: 'vabouts'
   get 'san-pham-gao' => 'website#products', as: 'vproducts'
   get 'thi-truong-gao' => 'website#market', as: 'vmarket'
+  
   scope '/:content_type' do
     resources :contents do
       collection do

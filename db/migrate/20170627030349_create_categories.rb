@@ -1,0 +1,11 @@
+class CreateCategories < ActiveRecord::Migration[5.0]
+  def change
+    create_table :categories do |t|
+      t.string :vi
+      t.string :en
+      t.string :content
+
+      t.timestamps
+    end
+  end
+end

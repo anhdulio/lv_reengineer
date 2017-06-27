@@ -4,6 +4,7 @@ class Content < ApplicationRecord
   extend FriendlyId
   friendly_id :title, :use => :slugged
   validates_uniqueness_of :slug
+  belongs_to :category
 
   scope :published, (-> { where('published_at <= ?', Time.zone.now) })
 
