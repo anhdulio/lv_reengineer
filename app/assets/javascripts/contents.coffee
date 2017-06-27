@@ -8,25 +8,25 @@
     values = {}
     self_value = {}
     self_values = []
+    if input
+      input.value.split(',').forEach (s) ->
+        self_value['tag'] = s
+        self_values.push(self_value)
 
-    input.value.split(',').forEach (s) ->
-      self_value['tag'] = s
-      self_values.push(self_value)
+      result.forEach (s) ->
+        values[s] = null
+        return
 
-    result.forEach (s) ->
-      values[s] = null
-      return
+      $('.chips-'+attribute).material_chip
+        secondaryPlaceholder: 'Enter a ' + attribute
+        placeholder: '+ '+ attribute
+        data: self_values
+        autocompleteOptions:
+          data: values
+          limit: Infinity
+          minLength: 1
 
-    $('.chips-'+attribute).material_chip
-      secondaryPlaceholder: 'Enter a ' + attribute
-      placeholder: '+ '+ attribute
-      data: self_values
-      autocompleteOptions:
-        data: values
-        limit: Infinity
-        minLength: 1
-
-    input.value = result.toString()
+      input.value = result.toString()
 
     $('.chips-'+attribute).on 'chip.add', (e, chip) ->
       index = result.indexOf(chip.tag)
