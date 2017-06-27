@@ -2,11 +2,11 @@
   - url = @content.persisted? ? specific_content_path(@content) : contents_path
   = simple_form_for(@content, as: :content, url: url) do |f|
     = f.hidden_field :type, value: @content.type
-    = f.input :title, wrapper_html: { class: 'input-field validate' }
-    = f.input :short, wrapper_html: { class: 'input-field' }
-    = f.input :body, as: :text, wrapper_html: { class: 'input-field' }
-    = f.association :category, collection: Category.where(content: params['content_type']), :label_method => :en, :value_method => :id, prompt: "Choose a Category", wrapper_html: { class: 'input-field' }
-    = f.input :locale, collection: %i[vi en both], wrapper_html: { class: 'input-field' }
+    = f.input :title
+    = f.input :short
+    = f.input :body, as: :text
+    = f.association :category, collection: Category.where(content: params['content_type']), :label_method => :en, :value_method => :id, prompt: "Choose a Category"
+    = f.input :locale, collection: %i[vi en both], prompt: "Choose a Locale"
     - @content.class.content_attributes.each do |attr_name, attr_type|
       - case attr_name
       - when :spec
