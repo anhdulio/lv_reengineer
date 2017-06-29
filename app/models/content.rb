@@ -7,6 +7,7 @@ class Content < ApplicationRecord
   belongs_to :category
 
   scope :published, (-> { where('published_at <= ?', Time.zone.now) })
+  scope :locale, (->(locale) { where(locale: [locale,'both']) })
 
   def self.content_attr(attr_name, attr_type = :string)
     content_attributes[attr_name] = attr_type

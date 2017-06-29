@@ -9,7 +9,7 @@ class WebsiteController < ApplicationController
 
   def homepage
     @header_info = { title: t('website.homepage.header.title'), subtitle: t('website.homepage.header.subtitle') }
-    @features = Content.where(featured: true).take(3)
+    @features = Content.locale(I18n.locale).where(featured: true).take(3)
     @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
     @clients = get_clients
     @products = []
@@ -65,7 +65,7 @@ class WebsiteController < ApplicationController
   private
 
   def get_contents(content_type)
-    Content.where(type: content_type.to_s.capitalize)
+    Content.locale(I18n.locale).where(type: content_type.to_s.capitalize)
   end
 
   def get_clients

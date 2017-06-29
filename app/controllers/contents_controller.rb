@@ -21,7 +21,8 @@ class ContentsController < ApplicationController
   end
 
   def show
-    @header_info = { title: @content.title, subtitle: @content.short }
+    #@header_info = { title: @content.title, subtitle: @content.short }
+    @header_info = { title: @content.title, subtitle: '' }
     @contact_widget = true
   end
 
@@ -44,7 +45,7 @@ class ContentsController < ApplicationController
 
   def update
     if @content.update(content_params)
-      redirect_to specific_content_path(@content), notice: 'Content was success
+      redirect_to specific_contents_path, notice: 'Content was success
       fully updated.'
     else
       render :edit

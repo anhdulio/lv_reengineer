@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :set_locale
 
     def specific_contents_path
       contents_path(content_type: contents_type.tableize)
@@ -20,4 +21,11 @@ class ApplicationController < ActionController::Base
       edit_content_path(content, content_type: contents_type.tableize)
     end
     helper_method :edit_specific_content_path
+
+    def set_locale
+      if params[:locale]
+        I18n.locale = params[:locale]
+      end
+    end
+
 end
