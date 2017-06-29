@@ -7,8 +7,8 @@
         .lcard
           .ltop
             - if I18n.locale == :en
-              .lprice.right-align= "#{product.latest_price} USD/tons"
-              - diff = product.latest_price - product.l7d_price.to_i
+              .lprice.right-align= "#{product.latest_price*1000/@ex[:latest]} USD/tons"
+              - diff = (product.latest_price*1000/@ex[:latest] - product.l7d_price.to_i*1000/@ex[:l7d])
               - if diff > 0
                 .valign-wrapper
                   %i.material-icons.green-text.text-darken-2 trending_up
@@ -18,8 +18,8 @@
                   %i.material-icons.red-text.text-darken-2 trending_down
                   = diff.abs
             - else
-              .lprice.right-align= "#{(product.latest_price * @ex[:latest])/1000} VND/kgs"
-              - diff = (product.latest_price*@ex[:latest] - product.l7d_price.to_i*@ex[:l7d])/1000
+              .lprice.right-align= "#{product.latest_price} VND/kgs"
+              - diff = product.latest_price - product.l7d_price.to_i
               - if diff > 0
                 .valign-wrapper
                   %i.material-icons.green-text.text-darken-2 trending_up
