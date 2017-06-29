@@ -5,6 +5,10 @@
         %li
           = link_to content_path(feature, content_type: feature.type.tableize) do
             = image_tag feature.main_image
-            .caption.center-align
-              %h3= feature.title
-              %h5= feature.short
+            .caption.left-align
+              .btn-large.primary-background.hide-on-med-and-down= feature.title
+              .btn.primary-background.hide-on-large-only= feature.title
+              - (feature.spec + feature.usage).split(',').each do |spec|
+                - if spec != ''
+                  .btn-large.secondary-background.hide-on-med-and-down= spec
+                  .btn.secondary-background.hide-on-large-only= spec

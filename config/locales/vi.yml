@@ -22,42 +22,42 @@
 vi:
   website:
     menubar:
-      logo: 'Loc Van Rice'
-      market: 'Thị Trường'
-      about: 'Về chúng tôi'
-      blog: 'Blog'
-      product: 'Product'
+      logo: 'gao trang loc van'
+      market: 'Thị trường'
+      about: 'Giới thiệu'
+      blog: 'Cẩm nang gạo'
+      product: 'Sản phẩm'
     filterbar:
-      readmore: 'Read More ...'
+      readmore: 'Xem chi tiết'
     homepage:
       header:
-        title: 'Introduction to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: 'Bậc thầy gạo trắng'
+        subtitle: '20 năm qua, chúng tôi cung cấp gạo trắng cho mọi nhu cầu với giá thành hợp lý nhất'
       price:
-        title: 'Vietnam White Rice Price Quote'
-        subtitle: 'Price compared to last week'
+        title: 'Giá gạo trắng ngày hôm nay'
+        subtitle: 'Giá gạo trắng tại kho - Sa Đéc, Đồng Tháp. Biến động giá cả so với tuần trước.'
       client:
-        title: 'Loc Van Rice clients over 20 years'
-        subtitle: 'International and Domestic clients'
+        title: 'Đối tác của Gạo Lộc Vân'
+        subtitle: 'Cùng chúng tôi đưa gạo trắng đi khắp thế giới'
       footer:
-        contact_title: 'Contact Loc Van'
+        contact_title: 'Liên hệ'
         contact_phone: '+84 939 024 961'
-        contact_address: 'DT 852 Tan Duong Lai Vung Dong Thap'
+        contact_address: 'ĐT 852 Tân Dương, Lai Vung, Đồng Tháp'
         contact_email: 'locvanrice@gmail.com'
         copy_right: '©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer & Exporter'
     abouts:
       header:
-        title: 'About to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: 'Gạo cho cuộc sống'
+        subtitle: 'làm cho bạn bè trong chuỗi giá trị gạo vui'
     market:
       header:
-        title: 'Market to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: 'Thị trường gạo trắng'
+        subtitle: 'cập nhật giá gạo trắng tại kho hằng ngày ở Lộc Vân'
     products:
       header:
-        title: 'Product to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: 'Sản phẩm gạo trắng'
+        subtitle: 'đảm bảo chất lượng, an toàn thực phẩm và giá thành'
     blogs:
       header:
-        title: 'Blog to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: 'Cẩm nang gạo'
+        subtitle: 'khám phá những thông tin hữu ích liên quan đến gạo trắng'

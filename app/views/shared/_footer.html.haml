@@ -33,7 +33,7 @@
           %ul
             - items[:sub].each do |item|
               %li
-                = link_to(item[0], "/#{key}##{item[0].parameterize}", class: 'white-text strong')
+                = link_to(item, "/#{key}##{item.parameterize}", class: 'white-text strong')
   .footer-copyright
     .container.center-align
       %b.white-text= "#{t('website.homepage.footer.copy_right')} - #{t('website.homepage.footer.contact_address')}"

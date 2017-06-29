@@ -7,26 +7,24 @@ module MenuConcern
 
   def set_menubar
     logo_url = 'brand/loc_van_rice_logo.png'
-
     case I18n.locale
     when :vi
-      @acat = Category.where(content: 'about').collect { |p| [p.vi] }
-      @bcat = Category.where(content: 'blog').collect { |p| [p.vi] }
-      @pcat = Category.where(content: 'product').collect { |p| [p.vi] }
+      @acat = Category.where(content: 'abouts').collect { |p| p.vi }
+      @bcat = Category.where(content: 'blogs').collect { |p| p.vi }
+      @pcat = Category.where(content: 'products').collect { |p| p.vi }
       market_url = emarket_path
       abouts_url = eabouts_path
       products_url = eproducts_path
       blogs_url = eblogs_path
     when :en
-      @acat = Category.where(content: 'about').collect { |p| [p.en] }
-      @bcat = Category.where(content: 'blog').collect { |p| [p.en] }
-      @pcat = Category.where(content: 'product').collect { |p| [p.en] }
+      @acat = Category.where(content: 'abouts').collect { |p| p.en }
+      @bcat = Category.where(content: 'blogs').collect { |p| p.en }
+      @pcat = Category.where(content: 'products').collect { |p| p.en }
       market_url = emarket_path
       abouts_url = eabouts_path
       products_url = eproducts_path
       blogs_url = eblogs_path
     end
-
     menu = {
       logo: logo_url,
       menu: {

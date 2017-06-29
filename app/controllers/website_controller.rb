@@ -1,7 +1,6 @@
 class WebsiteController < ApplicationController
   include MenuConcern
   before_action :set_menubar
-  before_action :set_locale
   # add filter bar to template, false by default
 
   def admin; end
@@ -27,7 +26,7 @@ class WebsiteController < ApplicationController
     @header_info = { title: t('website.abouts.header.title'), subtitle: t('website.abouts.header.subtitle') }
     @filter_bar = true
     @contents = get_contents(:about)
-    @cats = About.distinct.pluck(:category)
+    @cats = Category.where(content: 'abouts')
     @contact_widget = true
     render 'contents'
   end
@@ -36,7 +35,7 @@ class WebsiteController < ApplicationController
     @header_info = { title: t('website.blogs.header.title'), subtitle: t('website.blogs.header.subtitle') }
     @filter_bar = true
     @contents = get_contents(:blog)
-    @cats = Blog.distinct.pluck(:category)
+    @cats = Category.where(content: 'blogs')
     @contact_widget = true
     render 'contents'
   end
@@ -58,9 +57,9 @@ class WebsiteController < ApplicationController
     @header_info = { title: t('website.products.header.title'), subtitle: t('website.products.header.subtitle') }
     @filter_bar = true
     @contents = get_contents(:product)
-    @cats = Product.distinct.pluck(:category)
-    render 'contents'
+    @cats = Category.where(content: 'products')
     @contact_widget = true
+    render 'contents'
   end
 
   private
@@ -78,12 +77,9 @@ class WebsiteController < ApplicationController
       vinafood: 'http://www.vinafood2.com.vn'
     }
   end
+
   def website_params
     params.permit(:filter)
-  end
-
-  def set_locale
-    I18n.locale = :en
   end
 
 end

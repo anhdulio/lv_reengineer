@@ -4,13 +4,13 @@
             %ul.tabs
                 - @cats.each do |cat|
                     %li.tab
-                        = link_to(cat, "##{cat.parameterize}")
+                        = link_to(cat.method(I18n.locale).call, "##{cat.id}")
 .container.contents
     - @cats.each do |cat|
-        .col.s12{id: "#{cat.parameterize}"}
+        .col.s12{id: "#{cat.id}"}
             .row
                 - @contents.each do |content|
-                    - if content.category.parameterize == cat.parameterize
+                    - if content.category.id == cat.id
                         .col.l4.m6.s12
                             .card.medium.hoverable
                                 .card-image

@@ -6,14 +6,14 @@
                 - if value[:sub]
                     - value[:sub].each do |item|
                         %li
-                            = link_to(item[0], "/#{key}##{item[0].parameterize}")
+                            = link_to(item, "/#{key}##{item.parameterize}")
         -# Mobile Dropdown Structure for Nav Bar
         -@menubar[:menu].each do |key, value|
             %ul.dropdown-content{id: "#{key}-dropdown-mobile"}
                 - if value[:sub]
                     - value[:sub].each do |item|
                         %li
-                            = link_to(item[0], "/#{key}##{item[0].parameterize}")
+                            = link_to(item, "/#{key}##{item.parameterize}")
         -# Nav Bar
         %nav#menu-bar
             .nav-wrapper
@@ -61,7 +61,6 @@
         .header-title
             %h1= @header_info[:title]
             %h4= @header_info[:subtitle]
-
 
 - if @filter_bar == true
     #filter-bar

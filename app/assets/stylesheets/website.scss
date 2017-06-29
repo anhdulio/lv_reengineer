@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.primary-background {
+  background-color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+.primary-text {
+  color: $primary-color;
+}
+.secondary-background {
+  background-color: $secondary-color;
+}
+.secondary-text {
+  color: $secondary-color;
+}
 // Header with background pattern
 .header {
   min-height: 40vh;
@@ -21,6 +36,9 @@
   .header-title {
     text-align: center;
     color: white;
+  }
+  .dropdown-content li > a {
+    font-size: 14px;
   }
 }
 
@@ -94,15 +112,29 @@
   }
 }
 
+//Slider
+#features {
+  .caption.left-align{
+    display: flex;
+    flex-flow: row wrap;
+    .btn-large, .btn {
+      margin: 2px;
+    };
+  }
+}
+
 // Price Quote
 
 .ldashboard {
+  min-height: 400px;
   .lcards {
     font-size: 14px;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     .lcard {
       flex: 1 1 220px;
+      max-width: 220px;
       height: 138px;
       display: flex;
       flex-flow: column nowrap;
