@@ -33,6 +33,12 @@
   .container nav {
     box-shadow: none;
   }
+  nav ul li:last-child {
+    @extend .secondary-background
+  }
+  nav ul li ul li:last-child {
+    background-color: white;
+  }
   .header-title {
     text-align: center;
     color: white;
