@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails', '~> 4.5.0', require: false
+  gem 'html2haml'
 end
 
 group :development do

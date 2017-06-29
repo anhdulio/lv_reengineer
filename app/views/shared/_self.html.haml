@@ -1,0 +1,25 @@
+.card-panel.contact-card
+  .user_img2
+    %span= image_tag 'socials/anhdu.png', class: 'circle'
+    %p.card-title.medium= t('website.contacts.self.name')
+    %p.card-title= t('website.contacts.self.phone')
+    %p.card-title= t('website.contacts.self.email')
+  .card-content.contacts
+    = link_to "http://t.me/anhdulio" do
+      = image_tag "socials/telegram.svg"
+      %span Telegram
+    = link_to "http://m.me/anhdulio" do
+      = image_tag "socials/messeger.svg"
+      %span Messenger
+    = link_to "skype:anhdulio?chat" do
+      = image_tag "socials/skype.svg"
+      %span Skype
+    = link_to "whatsapp://send?text=hey&amp;phone=84939024961" do
+      = image_tag "socials/whatsapp.svg"
+      %span WhatsApp
+    = link_to "viber://add?number=84939024961" do
+      = image_tag "socials/viber.svg"
+      %span Viber
+    = link_to "http://zalo.me/0939024961" do
+      = image_tag "socials/zalo.png"
+      %span Zalo

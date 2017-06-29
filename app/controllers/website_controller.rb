@@ -7,6 +7,14 @@ class WebsiteController < ApplicationController
 
   def health; end
 
+  def landing;
+  end
+
+  def contact
+    @header_info = { title: t('website.contacts.title'), subtitle: t('website.contacts.subtitle') }
+    @contact_widget = true
+  end
+
   def homepage
     @header_info = { title: t('website.homepage.header.title'), subtitle: t('website.homepage.header.subtitle') }
     @features = Content.locale(I18n.locale).where(featured: true).take(3)

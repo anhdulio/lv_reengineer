@@ -1,0 +1,8 @@
+= simple_form_for(@category) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :content, collection: %i[products abouts blogs]
+    = f.input :vi
+    = f.input :en
+  .form-actions
+    = f.button :submit

@@ -27,6 +27,7 @@ vi:
       about: 'Giới thiệu'
       blog: 'Cẩm nang gạo'
       product: 'Sản phẩm'
+      contact: 'Liên hệ'
     filterbar:
       readmore: 'Xem chi tiết'
     homepage:
@@ -40,11 +41,7 @@ vi:
         title: 'Đối tác của Gạo Lộc Vân'
         subtitle: 'Cùng chúng tôi đưa gạo trắng đi khắp thế giới'
       footer:
-        contact_title: 'Liên hệ'
-        contact_phone: '+84 939 024 961'
-        contact_address: 'ĐT 852 Tân Dương, Lai Vung, Đồng Tháp'
-        contact_email: 'locvanrice@gmail.com'
-        copy_right: '©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer & Exporter'
+        copy_right: '©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer & Exporter - ĐT 852 Tân Dương, Lai Vung, Đồng Tháp'
     abouts:
       header:
         title: 'Gạo cho cuộc sống'
@@ -61,3 +58,20 @@ vi:
       header:
         title: 'Cẩm nang gạo'
         subtitle: 'khám phá những thông tin hữu ích liên quan đến gạo trắng'
+    contacts:
+      title: 'Cảm ơn bạn đã quan tâm'
+      subtitle: 'Vui lòng để lại thông tin, chúng tôi sẽ liên hệ trong 8 giờ tới'
+      self:
+        name: 'Bảo Anh'
+        phone: '0939 024 961'
+        address: 'ĐT 852 Tân Dương, Lai Vung, Đồng Tháp'
+        email: 'locvanrice@gmail.com'
+      zoho:
+        required: 'Vui lòng nhập thông tin'
+        company: 'Công ty'
+        name: 'Tên'
+        email: 'Email'
+        mobile: 'Điện thoại'
+        skype:  'Skype'
+        submit: 'Gửi'
+        reset: 'Xóa'

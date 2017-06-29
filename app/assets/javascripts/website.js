@@ -6,5 +6,8 @@ $(document).on('turbolinks:load', function() {
   $('.slider').slider();
   $('.carousel').carousel();
   $(".button-collapse").sideNav();
+  $('.modal').modal({
+     opacity: 1 // Opacity of modal background
+  });
   Materialize.updateTextFields();
 })

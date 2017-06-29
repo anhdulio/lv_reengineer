@@ -5,7 +5,22 @@
 .container#price-quote
   = render 'shared/dashboard_card'
 .divider
+/ Modal Trigger
+%a.waves-effect.waves-light.btn{:href => "#contact-modal"} Contact Me Now
+/ Modal Trigger
+.divider
 .container#our-clients
   = render 'shared/carousel'
 #homepage-footer
   = render 'shared/footer'
+
+/ Modal Structure
+#contact-modal.modal
+  .modal-content
+    %p
+      %h4= t('website.contacts.title')
+      .flow-text= t('website.contacts.subtitle')
+    =render 'shared/contact'
+  .modal-footer
+    .center-align
+      %b= "#{t('website.homepage.footer.copy_right')}"

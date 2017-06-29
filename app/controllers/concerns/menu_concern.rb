@@ -12,10 +12,12 @@ module MenuConcern
       @acat = Category.where(content: 'abouts').collect { |p| p.vi }
       @bcat = Category.where(content: 'blogs').collect { |p| p.vi }
       @pcat = Category.where(content: 'products').collect { |p| p.vi }
-      market_url = emarket_path
-      abouts_url = eabouts_path
-      products_url = eproducts_path
-      blogs_url = eblogs_path
+      market_url = vmarket_path
+      abouts_url = vabouts_path
+      products_url = vproducts_path
+      blogs_url = vblogs_path
+      contact_url = vcontact_path
+
     when :en
       @acat = Category.where(content: 'abouts').collect { |p| p.en }
       @bcat = Category.where(content: 'blogs').collect { |p| p.en }
@@ -24,6 +26,7 @@ module MenuConcern
       abouts_url = eabouts_path
       products_url = eproducts_path
       blogs_url = eblogs_path
+      contact_url = econtact_path
     end
     menu = {
       logo: logo_url,
@@ -31,7 +34,8 @@ module MenuConcern
         market: { title: t('website.menubar.market'), url: market_url, sub: nil },
         abouts: { title: t('website.menubar.about'), url: abouts_url, sub: @acat },
         blogs: { title: t('website.menubar.blog'), url: blogs_url, sub: @bcat },
-        products: { title: t('website.menubar.product'), url: products_url, sub: @pcat }
+        products: { title: t('website.menubar.product'), url: products_url, sub: @pcat },
+        contact: { title: t('website.menubar.contact'), url: contact_url, sub: nil }
       }
     }
     @menubar = menu
