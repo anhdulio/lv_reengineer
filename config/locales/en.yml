@@ -1,63 +1,69 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
+---
 en:
   website:
     menubar:
-      logo: 'Loc Van Rice'
-      market: 'Market'
-      about: 'About'
-      blog: 'Blog'
-      product: 'Product'
+      logo: Loc Van Rice
+      market: Market
+      about: About
+      blog: Blog
+      product: Product
+      contact: 
+      language: 
+      en: 
+      vi: 
     filterbar:
-      readmore: 'Read More ...'
+      readmore: Read More ...
+      spec: Specs
+      usage: Usage
     homepage:
       header:
-        title: 'Introduction to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: 'white rice : masterful'
+        subtitle: over 20 years, we supply Vietnam white rice throughout Africa and
+          South East Asia.
       price:
-        title: 'Vietnam White Rice Price Quote'
-        subtitle: 'Price compared to last week'
+        title: Vietnam white rice price quotes
+        subtitle: Exwork price at Sa Dec, Dong Thap warehouse. Price compared to last
+          week.
       client:
-        title: 'Loc Van Rice clients over 20 years'
-        subtitle: 'International and Domestic clients'
+        title: Loc Van rice's partners
+        subtitle: To supply white rice all over the world
       footer:
-        contact_title: 'Contact Loc Van'
-        contact_phone: '+84 939 024 961'
-        contact_address: 'DT 852 Tan Duong Lai Vung Dong Thap'
-        contact_email: 'locvanrice@gmail.com'
-        copy_right: '©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer & Exporter'
+        contact_title: Contact Loc Van
+        contact_phone: "+84 939 024 961"
+        contact_address: DT 852 Tan Duong Lai Vung Dong Thap
+        contact_email: locvanrice@gmail.com
+        copy_right: "©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer &
+          Exporter"
     abouts:
       header:
-        title: 'About to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: rice for life
+        subtitle: to make friends in the rice value chains happy
     market:
       header:
-        title: 'Market to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: white rice market
+        subtitle: daily update on white rice EXW price at Loc Van
     products:
       header:
-        title: 'Product to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: white rice products
+        subtitle: ensure quality, food safety and price
     blogs:
       header:
-        title: 'Blog to Loc Van'
-        subtitle: 'We produce awesome rice'
+        title: Rice blogs
+        subtitle: We produce awesome rice
+    contacts:
+      title: Thanks for your interest
+      subtitle: Please leave the information, we will contact within 8 hours
+      self:
+        name: Anh Du
+        phone: "+84 939 024 961"
+        address: DT852 Tan Duong, Lai Vung, Dong Thap
+        email: locvanrice@gmail.com
+      zoho:
+        required: Please input this field
+        company: Company
+        name: Name
+        email: Email
+        mobile: Mobile
+        skype: Skype
+        submit: Submit
+        reset: Reset

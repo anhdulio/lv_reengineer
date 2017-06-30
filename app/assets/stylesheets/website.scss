@@ -33,10 +33,10 @@
   .container nav {
     box-shadow: none;
   }
-  nav ul li:last-child {
+  nav ul li:nth-last-child(2) {
     @extend .secondary-background
   }
-  nav ul li ul li:last-child {
+  nav ul li ul li:nth-last-child(2) {
     background-color: white;
   }
   .header-title {

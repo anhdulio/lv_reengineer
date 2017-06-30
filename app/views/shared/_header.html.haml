@@ -7,6 +7,12 @@
                     - value[:sub].each do |item|
                         %li
                             = link_to(item, "/#{key}##{item.parameterize}")
+        %ul.dropdown-content{id: "language-dropdown"}
+            %li
+                %a{href: '/?locale=vi'} Vietnamese
+            %li
+                %a{href: '/?locale=en'} English
+
         -# Mobile Dropdown Structure for Nav Bar
         -@menubar[:menu].each do |key, value|
             %ul.dropdown-content{id: "#{key}-dropdown-mobile"}
@@ -14,6 +20,11 @@
                     - value[:sub].each do |item|
                         %li
                             = link_to(item, "/#{key}##{item.parameterize}")
+        %ul.dropdown-content{id: "language-dropdown-mobile"}
+            %li
+                %a{href: '/?locale=vi'} Vietnamese
+            %li
+                %a{href: '/?locale=en'} English
         -# Nav Bar
         %nav#menu-bar
             .nav-wrapper
@@ -39,6 +50,12 @@
                         - else
                             %li
                                 = link_to value[:title], value[:url]
+                    %li
+                        = link_to "#!", class: 'dropdown-button', data: {activates: "language-dropdown"} do
+                            = session[:locale]
+                            %i.material-icons.left language
+                            %i.material-icons.right arrow_drop_down
+
                 -# Mobile Nav Bar
                 %ul.side-nav#mobile
                     %li
@@ -57,6 +74,11 @@
                         - else
                             %li
                                 = link_to value[:title], value[:url]
+                    %li
+                        = link_to "#!", class: 'dropdown-button', data: {activates: "language-dropdown-mobile"} do
+                            = session[:locale]
+                            %i.material-icons.left language
+                            %i.material-icons.right arrow_drop_down
         -# Header content
         .header-title
             %h1= @header_info[:title]

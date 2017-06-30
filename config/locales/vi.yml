@@ -1,79 +1,69 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
+---
 vi:
   website:
     menubar:
-      logo: 'gao trang loc van'
-      market: 'Thị trường'
-      about: 'Giới thiệu'
-      blog: 'Cẩm nang gạo'
-      product: 'Sản phẩm'
-      contact: 'Liên hệ'
+      logo: gao trang loc van
+      market: Thị trường
+      about: Giới thiệu
+      blog: Cẩm nang gạo
+      product: Sản phẩm
+      contact: Liên hệ
+      language: Language
+      en: English
+      vi: Vienamese
     filterbar:
-      spec: 'Đặc tính'
-      usage: 'Công dụng'
-      readmore: 'Xem chi tiết'
+      spec: Đặc tính
+      usage: Công dụng
+      readmore: Xem chi tiết
     homepage:
       header:
-        title: 'Bậc thầy gạo trắng'
-        subtitle: '20 năm qua, chúng tôi cung cấp gạo trắng cho mọi nhu cầu với giá thành hợp lý nhất'
+        title: Bậc thầy gạo trắng
+        subtitle: 20 năm qua, chúng tôi cung cấp gạo trắng cho mọi nhu cầu với giá
+          thành hợp lý nhất
       price:
-        title: 'Giá gạo trắng ngày hôm nay'
-        subtitle: 'Giá gạo trắng tại kho - Sa Đéc, Đồng Tháp. Biến động giá cả so với tuần trước.'
+        title: Giá gạo trắng ngày hôm nay
+        subtitle: Giá gạo trắng tại kho - Sa Đéc, Đồng Tháp. Biến động giá cả so với
+          tuần trước.
       client:
-        title: 'Đối tác của Gạo Lộc Vân'
-        subtitle: 'Cùng chúng tôi đưa gạo trắng đi khắp thế giới'
+        title: Đối tác của Gạo Lộc Vân
+        subtitle: Cùng chúng tôi đưa gạo trắng đi khắp thế giới
       footer:
-        copy_right: '©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer & Exporter - ĐT 852 Tân Dương, Lai Vung, Đồng Tháp'
+        copy_right: "©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer &
+          Exporter - ĐT 852 Tân Dương, Lai Vung, Đồng Tháp"
+        contact_title: 
+        contact_phone: 
+        contact_address: 
+        contact_email: 
     abouts:
       header:
-        title: 'Gạo cho cuộc sống'
-        subtitle: 'làm cho bạn bè trong chuỗi giá trị gạo vui'
+        title: Gạo cho cuộc sống
+        subtitle: làm cho bạn bè trong chuỗi giá trị gạo vui
     market:
       header:
-        title: 'Thị trường gạo trắng'
-        subtitle: 'cập nhật giá gạo trắng tại kho hằng ngày ở Lộc Vân'
+        title: Thị trường gạo trắng
+        subtitle: cập nhật giá gạo trắng tại kho hằng ngày ở Lộc Vân
     products:
       header:
-        title: 'Sản phẩm gạo trắng'
-        subtitle: 'đảm bảo chất lượng, an toàn thực phẩm và giá thành'
+        title: Sản phẩm gạo trắng
+        subtitle: đảm bảo chất lượng, an toàn thực phẩm và giá thành
     blogs:
       header:
-        title: 'Cẩm nang gạo'
-        subtitle: 'khám phá những thông tin hữu ích liên quan đến gạo trắng'
+        title: discover white rice essential information
+        subtitle: khám phá những thông tin hữu ích liên quan đến gạo trắng
     contacts:
-      title: 'Cảm ơn bạn đã quan tâm'
-      subtitle: 'Vui lòng để lại thông tin, chúng tôi sẽ liên hệ trong 8 giờ tới'
+      title: Cảm ơn bạn đã quan tâm
+      subtitle: Vui lòng để lại thông tin, chúng tôi sẽ liên hệ trong 8 giờ tới
       self:
-        name: 'Bảo Anh'
+        name: Bảo Anh
         phone: '0939 024 961'
-        address: 'ĐT 852 Tân Dương, Lai Vung, Đồng Tháp'
-        email: 'locvanrice@gmail.com'
+        address: ĐT 852 Tân Dương, Lai Vung, Đồng Tháp
+        email: locvanrice@gmail.com
       zoho:
-        required: 'Vui lòng nhập thông tin'
-        company: 'Công ty'
-        name: 'Tên'
-        email: 'Email'
-        mobile: 'Điện thoại'
-        skype:  'Skype'
-        submit: 'Gửi'
-        reset: 'Xóa'
+        required: Vui lòng nhập thông tin
+        company: Công ty
+        name: Tên
+        email: Email
+        mobile: Điện thoại
+        skype: Skype
+        submit: Gửi
+        reset: Xóa
