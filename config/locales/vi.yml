@@ -29,6 +29,8 @@ vi:
       product: 'Sản phẩm'
       contact: 'Liên hệ'
     filterbar:
+      spec: 'Đặc tính'
+      usage: 'Công dụng'
       readmore: 'Xem chi tiết'
     homepage:
       header:
