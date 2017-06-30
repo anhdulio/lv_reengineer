@@ -21,34 +21,34 @@ class ApplicationController < ActionController::Base
   end
   helper_method :edit_specific_content_path
 
-  private
-  def set_locale
-    if params[:locale]
-      I18n.locale = params[:locale]
-    elsif session[:locale]
-      I18n.locale = session[:locale]
-    else
-      I18n.locale = extract_locale_from_tld || I18n.default_locale
-      session[:locale] = I18n.locale
-    end
-	end
+private
+def set_locale
+  if params[:locale]
+    I18n.locale = params[:locale]
+  elsif session[:locale]
+    I18n.locale = session[:locale]
+  else
+    I18n.locale = extract_locale_from_tld || I18n.default_locale
+  end
+  session[:locale] = I18n.locale
+end
 
-  def check_domain
-    if request.host != "localhost" && request.host != "35.187.234.146"
-      if (request.host.include? "locvanrice") == false
-        redirect_to 'http://locvanrice.com'
-      end
+def check_domain
+  if request.host != "localhost" && request.host != "35.187.234.146"
+    if (request.host.include? "locvanrice") == false
+      redirect_to 'http://locvanrice.com'
     end
   end
+end
 
-  def extract_locale_from_tld
-    parsed_locale = request.host.split('.').last
-    case parsed_locale
-    when "com"
-      return :vi
-    when "net"
-      return :en
-    end
+def extract_locale_from_tld
+  parsed_locale = request.host.split('.').last
+  case parsed_locale
+  when "com"
+    return :vi
+  when "net"
+    return :en
   end
+end
 
 end

@@ -8,9 +8,6 @@ vi:
       blog: Cẩm nang gạo
       product: Sản phẩm
       contact: Liên hệ
-      language: Language
-      en: English
-      vi: Vienamese
     filterbar:
       spec: Đặc tính
       usage: Công dụng
@@ -30,10 +27,10 @@ vi:
       footer:
         copy_right: "©  2017 - Loc Van Rice - Reliable Vietnam Rice Manufacturer &
           Exporter - ĐT 852 Tân Dương, Lai Vung, Đồng Tháp"
-        contact_title: 
-        contact_phone: 
-        contact_address: 
-        contact_email: 
+        contact_title:
+        contact_phone:
+        contact_address:
+        contact_email:
     abouts:
       header:
         title: Gạo cho cuộc sống

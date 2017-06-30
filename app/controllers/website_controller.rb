@@ -23,7 +23,7 @@ class WebsiteController < ApplicationController
     @products = []
     @contact_widget = true
 
-    Product.find_each do |product|
+    Product.locale(I18n.locale).find_each do |product|
       product.update_product_price
       @products << product
     end
@@ -63,7 +63,7 @@ class WebsiteController < ApplicationController
     @products = []
     @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
 
-    Product.find_each do |product|
+    Product.locale(I18n.locale).find_each do |product|
       product.update_product_price
       @products << product
     end
