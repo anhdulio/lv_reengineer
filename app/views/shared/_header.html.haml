@@ -12,7 +12,6 @@
             %ul.dropdown-content{id: "#{key}-dropdown-mobile"}
                 - if value[:sub]
                     - value[:sub].each do |item|
-                        = item.last
                         %li
                             = link_to(item, "/#{key}##{item.parameterize}")
         -# Nav Bar
