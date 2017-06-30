@@ -4,10 +4,10 @@
             %ul.tabs
                 - @cats.each do |cat|
                     %li.tab
-                        = link_to(cat.method(I18n.locale).call, "##{cat.id}")
+                        = link_to(cat.locale, "##{cat.locale.parameterize}")
 .container.contents
     - @cats.each do |cat|
-        .col.s12{id: "#{cat.id}"}
+        .col.s12{id: "#{cat.locale.parameterize}"}
             .row
                 - @contents.each do |content|
                     - if content.category.id == cat.id

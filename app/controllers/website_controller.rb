@@ -48,6 +48,14 @@ class WebsiteController < ApplicationController
     render 'contents'
   end
 
+  def products
+    @header_info = { title: t('website.products.header.title'), subtitle: t('website.products.header.subtitle') }
+    @filter_bar = true
+    @contents = get_contents(:product)
+    @cats = Category.where(content: 'products')
+    @contact_widget = true
+    render 'contents'
+  end
 
   def market
     @header_info = { title: t('website.blogs.header.title'), subtitle: t('website.blogs.header.subtitle') }
@@ -61,14 +69,7 @@ class WebsiteController < ApplicationController
     end
   end
 
-  def products
-    @header_info = { title: t('website.products.header.title'), subtitle: t('website.products.header.subtitle') }
-    @filter_bar = true
-    @contents = get_contents(:product)
-    @cats = Category.where(content: 'products')
-    @contact_widget = true
-    render 'contents'
-  end
+
 
   private
 
