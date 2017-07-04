@@ -15,10 +15,10 @@
     %input{:name => "returnURL", :style => "display:none;", :type => "text", :value => "#{request.url}"}/
     / Do not remove this code.
     .input-field
-      %input.validate{:name => "Company", :type => "text", required: true, oninvalid: set_error("abc"), oninput: set_error() }/
+      %input.validate{:name => "Company", :type => "text", required: true, oninvalid: set_error(t('website.contacts.zoho.required')), oninput: set_error() }/
       %label{:for => "Company"}= t('website.contacts.zoho.company')
     .input-field
-      %input.validate{:name => "Last Name", :type => "text", required: true}/
+      %input.validate{:name => "Last Name", :type => "text", required: true, oninvalid: set_error(t('website.contacts.zoho.required')), oninput: set_error() }/
       %label{:for => "Last Name"}= t('website.contacts.zoho.name')
     .input-field
       %input{:name => "Email", :type => "text"}/
