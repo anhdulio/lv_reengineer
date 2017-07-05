@@ -22,8 +22,14 @@ class ContentsController < ApplicationController
 
   def show
     #@header_info = { title: @content.title, subtitle: @content.short }
-    @header_info = { title: @content.title, subtitle: '' }
-    @contact_widget = true
+    if @content.publish?
+      @meta_title = @content.title
+      @meta_description= @content.title
+      @header_info = { title: @content.title, subtitle: '' }
+      @contact_widget = true
+    else
+      render file: "#{Rails.root}/public/404"
+    end
   end
 
   def new
@@ -70,7 +76,7 @@ class ContentsController < ApplicationController
   end
 
   def content_params
-    allowed_attrs = %i[id type title short body category_id featured locale]
+    allowed_attrs = %i[id type title short body category_id featured locale published_at]
                     .concat(contents_type.constantize.content_attributes.keys)
     params.require(:content).permit(*allowed_attrs)
   end

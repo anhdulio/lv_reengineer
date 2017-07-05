@@ -40,4 +40,12 @@ class Content < ApplicationRecord
     end
   end
 
+  def publish?
+    if self.published_at
+      self.published_at > Time.now ? false : true
+    else
+      false
+    end
+  end
+
 end

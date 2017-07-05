@@ -8,7 +8,9 @@
             .caption.left-align
               .btn-large.primary-background.hide-on-med-and-down= feature.title
               .btn.primary-background.hide-on-large-only= feature.title
-              - (feature.spec + feature.usage).split(',').each do |spec|
-                - if spec != ''
-                  .btn-large.secondary-background.hide-on-med-and-down= spec
-                  .btn.secondary-background.hide-on-large-only= spec
+              - feature.respond_to?(:spec) ? (spec = feature.spec) : (spec = '')
+              - feature.respond_to?(:usage) ? (usage = feature.usage) : (usage = '')
+              - (spec + usage).split(',').each do |attr|
+                - if attr != ''
+                  .btn-large.secondary-background.hide-on-med-and-down= attr
+                  .btn.secondary-background.hide-on-large-only= attr
