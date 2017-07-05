@@ -6,7 +6,7 @@ class ContentsController < ApplicationController
   before_action :set_menubar
 
   def index
-    @contents = Content.where(type: contents_type)
+    @contents = Content.where(type: contents_type).order(:locale)
   end
 
   def update_price
