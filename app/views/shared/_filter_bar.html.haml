@@ -18,9 +18,9 @@
                                         = image_tag content.main_image
                                 .card-content
                                     %span.card-title= content.title
-                                    - if content.spec && content.spec != ''
+                                    - if content.respond_to?(:spec)
                                         %p= t('website.filterbar.spec') + " : " + content.spec.downcase.gsub(/\A,/,"").gsub(/,/," , ")
-                                    - if content.usage && content.usage != ''
+                                    - if content.respond_to?(:usage)
                                         %p= t('website.filterbar.usage') + " : " + content.usage.downcase.gsub(/\A,/,"").gsub(/,/," , ")
                                     %p= content.short.html_safe
                                 .card-action
