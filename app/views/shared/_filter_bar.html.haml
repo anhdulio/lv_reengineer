@@ -22,6 +22,6 @@
                                         %p= t('website.filterbar.spec') + " : " + content.spec.downcase.gsub(/\A,/,"").gsub(/,/," , ")
                                     - if content.usage && content.usage != ''
                                         %p= t('website.filterbar.usage') + " : " + content.usage.downcase.gsub(/\A,/,"").gsub(/,/," , ")
-                                    %p= content.short
+                                    %p= content.short.html_safe
                                 .card-action
                                     = link_to(t(:readmore, scope: [:website,:filterbar]), content_path(content.type.tableize(), content.friendly_id))
