@@ -14,7 +14,7 @@
                         .col.l4.m6.s12
                             .card.medium.hoverable
                                 .card-image
-                                    = link_to(content_path(content.type, content.friendly_id))  do
+                                    = link_to(content_path(content.type.tableize(), content.friendly_id))  do
                                         = image_tag content.main_image
                                 .card-content
                                     %span.card-title= content.title
@@ -22,4 +22,4 @@
                                     %p= t('website.filterbar.usage') + " : " + content.usage.downcase.gsub(/\A,/,"").gsub(/,/," , ")
                                     %p= content.short
                                 .card-action
-                                    = link_to(t(:readmore, scope: [:website,:filterbar]), content_path(content.type, content.friendly_id))
+                                    = link_to(t(:readmore, scope: [:website,:filterbar]), content_path(content.type.tableize(), content.friendly_id))

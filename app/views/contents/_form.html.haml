@@ -5,8 +5,8 @@
     = f.input :title
     = f.input :short
     = f.input :body, as: :text
-    - category = @content.category.en if @content.category
-    = f.association :category, collection: Category.where(content: params['content_type']), :label_method => :en, :value_method => :id, prompt: "Choose a Category", selected: category
+    - id = @content.category.id if @content.category
+    = f.association :category, collection: Category.where(content: params['content_type']), :label_method => :en, prompt: "Choose a Category", selected: id
     = f.input :locale, collection: %i[en vi both], prompt: "Choose a Locale"
     - @content.class.content_attributes.each do |attr_name, attr_type|
       - case attr_name
