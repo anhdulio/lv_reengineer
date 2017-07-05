@@ -18,8 +18,10 @@
                                         = image_tag content.main_image
                                 .card-content
                                     %span.card-title= content.title
-                                    %p= t('website.filterbar.spec') + " : " + content.spec.downcase.gsub(/\A,/,"").gsub(/,/," , ")
-                                    %p= t('website.filterbar.usage') + " : " + content.usage.downcase.gsub(/\A,/,"").gsub(/,/," , ")
+                                    - if content.spec && content.spec != ''
+                                        %p= t('website.filterbar.spec') + " : " + content.spec.downcase.gsub(/\A,/,"").gsub(/,/," , ")
+                                    - if content.usage && content.usage != ''
+                                        %p= t('website.filterbar.usage') + " : " + content.usage.downcase.gsub(/\A,/,"").gsub(/,/," , ")
                                     %p= content.short
                                 .card-action
                                     = link_to(t(:readmore, scope: [:website,:filterbar]), content_path(content.type.tableize(), content.friendly_id))
