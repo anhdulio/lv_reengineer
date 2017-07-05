@@ -248,3 +248,11 @@
 .modal-overlay {
   background-color: $secondary-color
 }
+
+// Fix error on super smal screen
+@media #{$small-and-down} {
+  .carousel .carousel-item {
+    width: 150px;
+    height: 150px;
+  }
+}
