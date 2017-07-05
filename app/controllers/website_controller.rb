@@ -11,11 +11,17 @@ class WebsiteController < ApplicationController
   end
 
   def contact
+    @meta_title = t('website.contacts.title')
+    @meta_description= t('website.contacts.subtitle')
+
     @header_info = { title: t('website.contacts.title'), subtitle: t('website.contacts.subtitle') }
     @contact_widget = true
   end
 
   def homepage
+    @meta_title = t('website.homepage.header.title')
+    @meta_description= t('website.homepage.header.subtitle')
+
     @header_info = { title: t('website.homepage.header.title'), subtitle: t('website.homepage.header.subtitle') }
     @features = Content.locale(I18n.locale).where(featured: true).take(3)
     @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
@@ -31,6 +37,9 @@ class WebsiteController < ApplicationController
   end
 
   def abouts
+    @meta_title = t('website.abouts.header.title')
+    @meta_description= t('website.abouts.header.subtitle')
+
     @header_info = { title: t('website.abouts.header.title'), subtitle: t('website.abouts.header.subtitle') }
     @filter_bar = true
     @contents = get_contents(:about)
@@ -40,6 +49,9 @@ class WebsiteController < ApplicationController
   end
 
   def blogs
+    @meta_title = t('website.blogs.header.title')
+    @meta_description= t('website.blogs.header.subtitle')
+
     @header_info = { title: t('website.blogs.header.title'), subtitle: t('website.blogs.header.subtitle') }
     @filter_bar = true
     @contents = get_contents(:blog)
@@ -49,6 +61,9 @@ class WebsiteController < ApplicationController
   end
 
   def products
+    @meta_title = t('website.products.header.title')
+    @meta_description= t('website.products.header.subtitle')
+
     @header_info = { title: t('website.products.header.title'), subtitle: t('website.products.header.subtitle') }
     @filter_bar = true
     @contents = get_contents(:product)
@@ -58,7 +73,10 @@ class WebsiteController < ApplicationController
   end
 
   def market
-    @header_info = { title: t('website.blogs.header.title'), subtitle: t('website.blogs.header.subtitle') }
+    @meta_title = t('website.market.header.title')
+    @meta_description= t('website.market.header.subtitle')
+
+    @header_info = { title: t('website.market.header.title'), subtitle: t('website.market.header.subtitle') }
     @contact_widget = true
     @products = []
     @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }

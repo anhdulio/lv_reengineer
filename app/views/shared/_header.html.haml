@@ -35,12 +35,6 @@
                     %i.material-icons menu
                 -# Desktop Nav Bar
                 %ul.right.hide-on-med-and-down#nav-mobile
-                    %li
-                        %form#nav-search-desktop
-                            .input-field
-                                %label.label-icon{for: 'searchme'}
-                                    %i.material-icons search
-                                %input#searchme{type: 'search', required: true}
                     - @menubar[:menu].each do |key, value|
                         - if value[:sub]
                             %li
@@ -52,19 +46,10 @@
                                 = link_to value[:title], value[:url]
                     %li
                         = link_to "#!", class: 'dropdown-button', data: {activates: "language-dropdown"} do
-                            = session[:locale]
                             %i.material-icons.left language
-                            %i.material-icons.right arrow_drop_down
 
                 -# Mobile Nav Bar
                 %ul.side-nav#mobile
-                    %li
-                        %form
-                            .input-field
-                                %input{id: 'search', type: 'search', required: true}
-                                %label.label-icon{for: 'search'}
-                                    %i.material-icons.black-text search
-                                %i.material-icons close
                     - @menubar[:menu].each do |key, value|
                         - if value[:sub]
                             %li
