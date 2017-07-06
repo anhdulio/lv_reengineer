@@ -4,9 +4,9 @@ en:
     menubar:
       logo: Loc Van Rice
       market: Market
-      about: About
-      blog: Blog
-      product: Product
+      about: Introduction
+      blog: Rice Essential
+      product: Products
       contact: Contact
     filterbar:
       readmore: Read More ...
