@@ -304,7 +304,7 @@
       justify-content: center;
       .card {
         background-color: rgba(255, 255, 255, 0);
-        width: 400px;
+        width: 80%;
         .card-title {
           @extend h4;
         }
@@ -325,9 +325,9 @@
       justify-content: center;
       .card {
         background-color: rgba(255, 255, 255, 0);
-        width: 90%;
+        width: 95%;
         .card-content {
-          padding: 12px;
+          padding: 6px;
         }
         .card-title {
           @extend h5;
