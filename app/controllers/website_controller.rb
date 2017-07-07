@@ -3,7 +3,9 @@ class WebsiteController < ApplicationController
   before_action :set_menubar
   # add filter bar to template, false by default
 
-  def admin; end
+  def admin
+    authenticate_admin!
+  end
 
   def health; end
 
