@@ -32,7 +32,7 @@ gem 'rails-i18n'
 gem 'simple_form'
 gem 'materialize-form'
 gem 'friendly_id', '~> 5.1.0'
-
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

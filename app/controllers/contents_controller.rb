@@ -4,6 +4,7 @@ class ContentsController < ApplicationController
 
   before_action :set_content, only: %i[show edit update destroy]
   before_action :set_menubar
+  before_action :authenticate_admin!, except: %i[show api]
 
   def index
     @contents = Content.where(type: contents_type).order(:locale)
