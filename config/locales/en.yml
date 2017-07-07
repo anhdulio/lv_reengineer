@@ -1,6 +1,10 @@
 ---
 en:
   website:
+    error:
+      notfound: Ops! We are unable to find your page.
+      success: We received your message, we will contact within 8 hours.
+      internal: Ops! Error occurs in our sites, please try again later.
     buynow: Request for quotation
     landing:
       meta_title: Chen com

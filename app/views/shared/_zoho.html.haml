@@ -12,7 +12,7 @@
     %input#zc_gad{:name => "zc_gad", :type => "hidden", :value => ""}/
     %input{:name => "xmIwtLD", :style => "display:none;", :type => "text", :value => "9bca6506e09d8d31d6db2beb94f7c9e3aca5f0c405b02dcfc719caddc9dc4aa9"}/
     %input{:name => "actionType", :style => "display:none;", :type => "text", :value => "TGVhZHM="}/
-    %input{:name => "returnURL", :style => "display:none;", :type => "text", :value => "#{request.url}"}/
+    %input{:name => "returnURL", :style => "display:none;", :type => "text", :value => "#{request.host}/success"}/
     / Do not remove this code.
     .input-field
       %input.validate{:name => "Company", :type => "text", required: true, oninvalid: set_error(t('website.contacts.zoho.required')), oninput: set_error() }/

@@ -77,7 +77,6 @@ class WebsiteController < ApplicationController
   def market
     @meta_title = t('website.market.header.title')
     @meta_description= t('website.market.header.subtitle')
-
     @header_info = { title: t('website.market.header.title'), subtitle: t('website.market.header.subtitle') }
     @contact_widget = true
     @products = []
@@ -88,8 +87,6 @@ class WebsiteController < ApplicationController
       @products << product
     end
   end
-
-
 
   private
 

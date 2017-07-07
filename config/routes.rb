@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  #error handing
+  match "/404", :to => "errors#not_found", :via => :all
+  match "/500", :to => "errors#internal_server_error", :via => :all
+  get '/success' => "errors#success"
+
   resources :categories
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

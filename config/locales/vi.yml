@@ -1,6 +1,10 @@
 ---
 vi:
   website:
+    error:
+      notfound: Xin lỗi, chúng tôi không thể tìm thấy trang bạn yêu cầu.
+      success: Tin nhắn đã được gửi đi, chúng tôi sẽ liên hệ trong vòng 8 giờ tới.
+      internal: Xin lỗi, có lỗi xảy ra ở trang của chúng tôi. Xin vui lòng thử lại sau.
     buynow: Liên hệ báo giá
     landing:
       meta_title: Gạo chén cơm
