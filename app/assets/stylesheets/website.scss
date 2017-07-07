@@ -197,7 +197,6 @@
 
 //shared/Self
 .card-panel.contact-card{
-  height: 500px;
   .contacts {
     display: flex;
     flex-flow: row wrap;
@@ -236,7 +235,6 @@
 
 //shared/Zoho
 .card-panel#crmWebToEntityForm{
-    height: 500px;
 }
 
 //Shared/Contact
@@ -244,6 +242,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
   .contact-element {
     flex: 1 1 320px;
     max-width: 360px;
