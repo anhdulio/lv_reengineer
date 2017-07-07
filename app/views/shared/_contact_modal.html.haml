@@ -2,9 +2,8 @@
 /%a.waves-effect.waves-light.btn{:href => "#contact-modal"} Contact Me Now
 #contact-modal.modal
   .modal-content
-    %p
-      %h5= t('website.contacts.title')
-      .flow-text= t('website.contacts.subtitle')
+    %p= t('website.contacts.title')
+    %p= t('website.contacts.subtitle')
     =render 'shared/contact'
   .modal-footer
     .center-align
