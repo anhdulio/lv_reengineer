@@ -7,7 +7,9 @@ class WebsiteController < ApplicationController
 
   def health; end
 
-  def landing;
+  def landing
+    @meta_title = t('website.landing.title')
+    @meta_description= t('website.landing.meta')
   end
 
   def contact
@@ -23,7 +25,7 @@ class WebsiteController < ApplicationController
     @meta_description= t('website.homepage.header.subtitle')
 
     @header_info = { title: t('website.homepage.header.title'), subtitle: t('website.homepage.header.subtitle') }
-    @features = Content.published.locale(I18n.locale).where(featured: true).order(:published_at).take(3)
+    @features = Content.published.locale(I18n.locale).where(featured: true).order(published_at: :desc).take(3)
     @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
     @clients = get_clients
     @products = []

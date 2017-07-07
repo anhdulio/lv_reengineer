@@ -1,6 +1,9 @@
 ---
 vi:
   website:
+    landing:
+      meta_title: Gạo chén cơm
+      meta_desc: Gạo sạch chén cơm ngon
     menubar:
       logo: gao trang loc van
       market: Thị trường

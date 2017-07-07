@@ -3,11 +3,23 @@ $(document).on('turbolinks:load', function() {
   get_full_chips('products','spec');
   $(".dropdown-button").dropdown();
   $('ul.tabs').tabs();
-  $('.slider').slider();
+  $('#homepage').slider();
+  $('#landing').slider('pause');
   $('.carousel').carousel();
   $(".button-collapse").sideNav();
   $('.modal').modal({
      opacity: 1 // Opacity of modal background
   });
   Materialize.updateTextFields();
+  $('#landing').slider({
+    indicators: false
+  });
+  $(".next").bind("click", function(){
+    $('#landing').slider('next');
+    $('#landing').slider('pause');
+  });
+  $(".previous").bind("click", function(){
+    $('#landing').slider('prev');
+    $('#landing').slider('pause');
+  });
 })
