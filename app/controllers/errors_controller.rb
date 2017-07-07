@@ -5,12 +5,12 @@ class ErrorsController < ApplicationController
 
   def not_found
     @header_info = { title: '', subtitle: t('website.error.notfound') }
-    render('template', :status => 404)
+    render('template')
   end
 
   def internal_server_error
     @header_info = { title: '', subtitle: t('website.error.internal') }
-    render('template', :status => 500)
+    render('template')
   end
 
   def success
