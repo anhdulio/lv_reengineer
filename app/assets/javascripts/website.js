@@ -10,7 +10,7 @@ $(document).on('turbolinks:load', function() {
   $('.modal').modal({
      opacity: 1 // Opacity of modal background
   });
-  Materialize.updateTextFields();
+  // Landing page
   $('#landing').slider({
     indicators: false
   });
@@ -22,4 +22,10 @@ $(document).on('turbolinks:load', function() {
     $('#landing').slider('prev');
     $('#landing').slider('pause');
   });
+
+  $("#landing #crmWebToEntityForm > form > div:nth-child(6) > input")[0].value = "Gạo chén cơm x 1 túi 10 kgs"
+
+  // Update all field materialize
+  Materialize.updateTextFields();
+
 })

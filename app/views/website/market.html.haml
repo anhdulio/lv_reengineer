@@ -2,6 +2,9 @@
   = render 'shared/header'
 .container#price-quote
   = render 'shared/dashboard_card'
-%p
+%p.center-align
+  %a.waves-effect.pulse.waves-light.btn{:href => "#contact-modal"}= t('website.buynow')
+= render 'shared/contact_modal'
+
 #about-footer
   = render 'shared/footer'

@@ -12,5 +12,9 @@
     - if @content.respond_to?(:usage)
       %blockquote= t('website.filterbar.usage') + " : " + @content.usage.downcase.gsub(/\A,/,"").gsub(/,/," , ")
     = @content.body.html_safe
+    %p.center-align
+      %a.waves-effect.pulse.waves-light.btn{:href => "#contact-modal"}= t('website.buynow')
+= render 'shared/contact_modal'
+
 #content-footer
   = render 'shared/footer'

@@ -1,6 +1,7 @@
 ---
 vi:
   website:
+    buynow: Liên hệ báo giá
     landing:
       meta_title: Gạo chén cơm
       meta_desc: Gạo sạch chén cơm ngon
@@ -53,6 +54,7 @@ vi:
     contacts:
       title: Cảm ơn bạn đã quan tâm
       subtitle: Vui lòng để lại thông tin, chúng tôi sẽ liên hệ trong 8 giờ tới
+      homepage: Trang chủ gạo Lộc Vân
       self:
         name: Bảo Anh
         phone: '0939 024 961'
@@ -60,7 +62,7 @@ vi:
         email: locvanrice@gmail.com
       zoho:
         required: Vui lòng nhập thông tin
-        company: Công ty
+        company: Sản phẩm
         name: Tên
         email: Email
         mobile: Điện thoại

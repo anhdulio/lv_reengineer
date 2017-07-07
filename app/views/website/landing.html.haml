@@ -8,7 +8,7 @@
             Gạo sạch
             %br chén cơm ngon
       .caption.buy
-        %a.btn-large.pulse.primary-background
+        %a.btn-large.pulse.primary-background{:href => "#contact-modal"}
           %i.material-icons.left> shopping_basket
           130,000 / 10kgs
       .caption.next
@@ -21,7 +21,7 @@
         %a.waves-effect.waves-light.btn.secondary-background
           <<<
       .caption.buy
-        %a.btn-large.pulse.secondary-background
+        %a.btn-large.pulse.secondary-background{:href => "#contact-modal"}
           %i.material-icons.left> shopping_basket
           130,000 / 10kgs
       .caption.info-desktop.hide-on-small-only
@@ -53,3 +53,5 @@
             .card-content
               .card-title Giao gạo tận tay
               Hiện tại, chúng tôi hỗ trợ giao gạo miễn phí tận tay người tiêu dùng trong địa bàn Thành Phố Hồ Chí Minh trong tối đa 2 ngày làm việc.
+
+  = render 'shared/contact_modal'

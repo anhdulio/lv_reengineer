@@ -1,6 +1,10 @@
 ---
 en:
   website:
+    buynow: Request for quotation
+    landing:
+      meta_title: Chen com
+      meta_desc: Good rice
     menubar:
       logo: Loc Van Rice
       market: Market
@@ -50,6 +54,7 @@ en:
     contacts:
       title: Thanks for your interest
       subtitle: Please leave the information, we will contact within 8 hours
+      homepage: Loc Van rice website
       self:
         name: Anh Du
         phone: "+84 939 024 961"
@@ -57,7 +62,7 @@ en:
         email: locvanrice@gmail.com
       zoho:
         required: Please input this field
-        company: Company
+        company: Product
         name: Name
         email: Email
         mobile: Mobile

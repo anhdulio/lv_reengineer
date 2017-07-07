@@ -3,9 +3,10 @@
 #contact-modal.modal
   .modal-content
     %p
-      %h4= t('website.contacts.title')
+      %h5= t('website.contacts.title')
       .flow-text= t('website.contacts.subtitle')
     =render 'shared/contact'
   .modal-footer
     .center-align
-      %b= "#{t('website.homepage.footer.copy_right')}"
+      %p= link_to(t('website.contacts.homepage'), root_path, target: "_blank")
+      %p= "#{t('website.homepage.footer.copy_right')}"

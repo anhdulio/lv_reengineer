@@ -8,8 +8,8 @@ class WebsiteController < ApplicationController
   def health; end
 
   def landing
-    @meta_title = t('website.landing.title')
-    @meta_description= t('website.landing.meta')
+    @meta_title = t('website.landing.meta_title')
+    @meta_description= t('website.landing.meta_desc')
   end
 
   def contact

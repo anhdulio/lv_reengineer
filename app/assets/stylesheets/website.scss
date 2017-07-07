@@ -105,6 +105,10 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     .lcard {
       flex: 1 1 220px;
       max-width: 220px;

@@ -4,7 +4,7 @@
     %h5.center-align= "#{t(:subtitle, scope: [:website, :homepage, :price])}"
     .lcards
       - @products.each do |product|
-        .lcard
+        %a.lcard{href: content_path(product, content_type: product.type.tableize())}
           .ltop
             - if I18n.locale == :en
               .lprice.right-align= "#{product.latest_price*1000/@ex[:latest]} USD/tons"

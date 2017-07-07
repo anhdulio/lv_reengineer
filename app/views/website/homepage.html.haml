@@ -4,8 +4,14 @@
   = render 'shared/fullslider'
 .container#price-quote
   = render 'shared/dashboard_card'
+
+%p.center-align
+  %a.waves-effect.pulse.waves-light.btn{:href => "#contact-modal"}= t('website.buynow')
+= render 'shared/contact_modal'
+
 .divider
 .container#our-clients
   = render 'shared/carousel'
 #homepage-footer
   = render 'shared/footer'
+
