@@ -23,7 +23,10 @@ $(document).on('turbolinks:load', function() {
     $('#landing').slider('pause');
   });
 
-  $("#landing #crmWebToEntityForm > form > div:nth-child(6) > input")[0].value = "Gạo chén cơm x 1 túi 10 kgs"
+  if (typeof $("#landing #crmWebToEntityForm > form > div:nth-child(6) > input")[0] != "undefined") {
+    $("#landing #crmWebToEntityForm > form > div:nth-child(6) > input")[0].value = "Gạo chén cơm x 1 túi 10 kgs"
+  }
+
 
   // Update all field materialize
   Materialize.updateTextFields();
