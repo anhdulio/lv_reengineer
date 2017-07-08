@@ -4,7 +4,6 @@ $(document).on('turbolinks:load', function() {
   $(".dropdown-button").dropdown();
   $('ul.tabs').tabs();
   $('#homepage').slider();
-  $('#landing').slider('pause');
   $('.carousel').carousel();
   $(".button-collapse").sideNav();
   $('.modal').modal({
@@ -14,6 +13,7 @@ $(document).on('turbolinks:load', function() {
   $('#landing').slider({
     indicators: false
   });
+  $('#landing').slider('pause');
   $(".next").bind("click", function(){
     $('#landing').slider('next');
     $('#landing').slider('pause');
