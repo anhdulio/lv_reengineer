@@ -16,7 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'haml'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
-
+#https://www.sitepoint.com/start-your-seo-right-with-sitemaps-on-rails/
+gem 'sitemap_generator'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

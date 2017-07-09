@@ -3,3 +3,5 @@
 # To ban all spiders from the entire site uncomment the next two lines:
 # User-agent: *
 # Disallow: /
+Sitemap: http://www.locvanrice.net/sitemaps/en/sitemap.xml.gz
+Sitemap: http://www.locvanrice.com/sitemaps/vi/sitemap.xml.gz
