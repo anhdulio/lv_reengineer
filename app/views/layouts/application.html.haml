@@ -5,7 +5,7 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %meta{name: 'description', content: "#{@meta_description}"}
-    %title= @meta_title? "Loc Van Rice | #{@meta_title}" : "Rails App"
+    %title= @meta_title? "#{t('website.title')} | #{@meta_title}" : "#{t('website.title')}"
     / Import Google Icon Font & Roboto
     %link{:href => "http://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Roboto", :rel => "stylesheet"}/
@@ -25,5 +25,3 @@
     = render 'shared/tawk'
     %p.notice= notice
     %p.alert= alert
-
-

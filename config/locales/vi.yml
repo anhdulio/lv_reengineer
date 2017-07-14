@@ -1,6 +1,7 @@
 ---
 vi:
   website:
+    title: Gạo Lộc Vân
     error:
       notfound: Xin lỗi, chúng tôi không thể tìm thấy trang bạn yêu cầu.
       success: Tin nhắn đã được gửi đi, chúng tôi sẽ liên hệ trong vòng 8 giờ tới.

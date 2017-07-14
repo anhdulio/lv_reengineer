@@ -1,6 +1,7 @@
 ---
 en:
   website:
+    title: Loc Van Rice
     error:
       notfound: Ops! We are unable to find your page.
       success: We received your message, we will contact within 8 hours.
