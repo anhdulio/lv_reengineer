@@ -7,21 +7,6 @@ class WebsiteController < ApplicationController
     authenticate_admin!
   end
 
-  def health; end
-
-  def landing
-    @meta_title = t('website.landing.meta_title')
-    @meta_description= t('website.landing.meta_desc')
-  end
-
-  def contact
-    @meta_title = t('website.contacts.title')
-    @meta_description= t('website.contacts.subtitle')
-
-    @header_info = { title: t('website.contacts.title'), subtitle: t('website.contacts.subtitle') }
-    @contact_widget = true
-  end
-
   def homepage
     @meta_title = t('website.homepage.header.title')
     @meta_description= t('website.homepage.header.subtitle')
@@ -38,6 +23,28 @@ class WebsiteController < ApplicationController
       @products << product
     end
 
+    breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
+    @breadcrumbs = [breadcrumb1]
+  end
+
+  def landing
+    @meta_title = t('website.landing.meta_title')
+    @meta_description= t('website.landing.meta_desc')
+    breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
+    breadcrumb2 = Breadcrumb.new(landing_url, t('website.breadcrumb.landing'), "2")
+    @breadcrumbs = [breadcrumb1, breadcrumb2]
+  end
+
+  def contact
+    @meta_title = t('website.contacts.title')
+    @meta_description= t('website.contacts.subtitle')
+
+    @header_info = { title: t('website.contacts.title'), subtitle: t('website.contacts.subtitle') }
+    @contact_widget = true
+
+    breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
+    breadcrumb2 = Breadcrumb.new("http://#{request.host}#{@menubar[:menu][:contact][:url]}", @menubar[:menu][:contact][:title], "2")
+    @breadcrumbs = [breadcrumb1, breadcrumb2]
   end
 
   def abouts
@@ -49,6 +56,9 @@ class WebsiteController < ApplicationController
     @contents = get_contents(:about)
     @cats = Category.where(content: 'abouts')
     @contact_widget = true
+    breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
+    breadcrumb2 = Breadcrumb.new("http://#{request.host}#{@menubar[:menu][:abouts][:url]}", @menubar[:menu][:abouts][:title], "2")
+    @breadcrumbs = [breadcrumb1, breadcrumb2]
     render 'contents'
   end
 
@@ -61,18 +71,30 @@ class WebsiteController < ApplicationController
     @contents = get_contents(:blog)
     @cats = Category.where(content: 'blogs')
     @contact_widget = true
+    breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
+    breadcrumb2 = Breadcrumb.new("http://#{request.host}#{@menubar[:menu][:blogs][:url]}", @menubar[:menu][:blogs][:title], "2")
+    @breadcrumbs = [breadcrumb1, breadcrumb2]
+    @blog_richcard = true
     render 'contents'
   end
 
   def products
     @meta_title = t('website.products.header.title')
     @meta_description= t('website.products.header.subtitle')
-
+    @product_richcard = true
     @header_info = { title: t('website.products.header.title'), subtitle: t('website.products.header.subtitle') }
     @filter_bar = true
-    @contents = get_contents(:product)
+    @contents = []
+    get_contents(:product).each do |product|
+      product.update_product_price
+      @contents << product
+    end
+    @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
     @cats = Category.where(content: 'products')
     @contact_widget = true
+    breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
+    breadcrumb2 = Breadcrumb.new("http://#{request.host}#{@menubar[:menu][:products][:url]}", @menubar[:menu][:products][:title], "2")
+    @breadcrumbs = [breadcrumb1, breadcrumb2]
     render 'contents'
   end
 
@@ -83,7 +105,9 @@ class WebsiteController < ApplicationController
     @contact_widget = true
     @products = []
     @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
-
+    breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
+    breadcrumb2 = Breadcrumb.new(@menubar[:menu][:market][:url], @menubar[:menu][:market][:title], "2")
+    @breadcrumbs = [breadcrumb1, breadcrumb2]
     Product.locale(I18n.locale).find_each do |product|
       product.update_product_price
       @products << product

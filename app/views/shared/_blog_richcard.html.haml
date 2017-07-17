@@ -1,0 +1,38 @@
+%script{:type => "application/ld+json"}
+  [
+  - @contents.each do |article|
+    {
+    "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://#{request.host}#{@menubar[:menu][:blogs][:url]}"
+    },
+    "@context": "http://schema.org/",
+    "@type": "NewsArticle",
+    "headline": "#{article.title}",
+    "description": "#{article.short}",
+    "datePublished": "#{article.published_at}",
+    "dateModified": "#{article.updated_at}",
+    "image": {
+    "@type": "ImageObject",
+    "url": "#{article.main_image}",
+    "height": "400",
+    "width": "1200"
+    },
+    "publisher": {
+    "@type": "Organization",
+    "name": "Gạo Lộc Vân",
+    "logo": {
+    "@type": "ImageObject",
+    "url": "http://storage.googleapis.com/singular-pixel-4346/Public/gaolocvan.png",
+    "height": "60",
+    "width": "600"
+    }
+    },
+    "author": {
+    "@type": "Person",
+    "name": "Anh Du"
+    }
+    }
+    - unless article.equal?(@contents.last)
+      ,
+  ]

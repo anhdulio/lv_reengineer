@@ -5,6 +5,15 @@ module MenuConcern
     helper_method :set_menubar
   end
 
+  class Breadcrumb
+    attr_accessor :href, :name, :position
+    def initialize(href, name, position)
+      @href = href
+      @name = name
+      @position = position
+    end
+  end
+
   def set_menubar
     logo_url = 'brand/loc_van_rice_logo.png'
     @acat = Category.where(content: 'abouts').collect { |p| p.locale }
@@ -38,4 +47,5 @@ module MenuConcern
     @filter_bar = false
     @contact_widget = false
   end
+
 end

@@ -7,6 +7,11 @@
 
 #content.container
   .card-panel
+    - if @content.type == "Product"
+      - if I18n.locale == :en
+        %blockquote= "Today price : " + number_to_currency(@content.latest_price*1000/@ex[:latest], precision: 0, unit: "USD/tons", format: "%n %u")
+      - else
+        %blockquote= "Giá Gạo hôm nay : " + number_to_currency(@content.latest_price, precision: 0, unit: "đ/ký", format: "%n %u")
     - if @content.respond_to?(:spec)
       %blockquote= t('website.filterbar.spec') + " : " + @content.spec.downcase.gsub(/\A,/,"").gsub(/,/," , ")
     - if @content.respond_to?(:usage)

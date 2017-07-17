@@ -1,6 +1,9 @@
 ---
 en:
   website:
+    breadcrumb:
+      home: 'Gạo Lộc Vân'
+      landing: 'Chen Com Brand'
     title: Loc Van Rice
     error:
       notfound: Ops! We are unable to find your page.

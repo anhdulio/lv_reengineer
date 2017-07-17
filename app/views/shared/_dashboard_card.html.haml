@@ -7,25 +7,25 @@
         %a.lcard{href: content_path(product, content_type: product.type.tableize())}
           .ltop
             - if I18n.locale == :en
-              .lprice.right-align= "#{product.latest_price*1000/@ex[:latest]} USD/tons"
+              .lprice.right-align= number_to_currency(product.latest_price*1000/@ex[:latest], precision: 0, unit: "USD/tons", format: "%n %u")
               - diff = (product.latest_price*1000/@ex[:latest] - product.l7d_price.to_i*1000/@ex[:l7d])
               - if diff > 0
                 .valign-wrapper
                   %i.material-icons.green-text.text-darken-2 trending_up
-                  = diff.abs
+                  = number_to_currency(diff.abs, precision: 0, unit: "USD/tons", format: "%n %u")
               - else
                 .valign-wrapper
                   %i.material-icons.red-text.text-darken-2 trending_down
-                  = diff.abs
+                  = number_to_currency(diff.abs, precision: 0, unit: "USD/tons", format: "%n %u")
             - else
-              .lprice.right-align= "#{product.latest_price} VND/kgs"
+              .lprice.right-align= number_to_currency(product.latest_price, precision: 0, unit: "đ/ký", format: "%n %u")
               - diff = product.latest_price - product.l7d_price.to_i
               - if diff > 0
                 .valign-wrapper
                   %i.material-icons.green-text.text-darken-2 trending_up
-                  = diff.abs
+                  = number_to_currency(diff.abs, precision: 0, unit: "đ/ký", format: "%n %u")
               - else
                 .valign-wrapper
                   %i.material-icons.red-text.text-darken-2 trending_down
-                  = diff.abs
+                  = number_to_currency(diff.abs, precision: 0, unit: "đ/ký", format: "%n %u")
           .lbot.valign-wrapper= product.title
