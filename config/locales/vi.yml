@@ -1,6 +1,9 @@
 ---
 vi:
   website:
+    breadcrumb:
+      home: 'Gạo Lộc Vân'
+      landing: 'Gạo Chén Cơm'
     title: Gạo Lộc Vân
     error:
       notfound: Xin lỗi, chúng tôi không thể tìm thấy trang bạn yêu cầu.

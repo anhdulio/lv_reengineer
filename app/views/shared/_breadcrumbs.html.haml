@@ -1,0 +1,18 @@
+%script{:type => "application/ld+json"}
+  {
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+  - @breadcrumbs.each do |breadcrumb|
+    {
+    "@type": "ListItem",
+    "position": "#{breadcrumb.position}",
+    "item": {
+    "@id": "#{breadcrumb.href}",
+    "name": "#{breadcrumb.name}"
+    }
+    }
+    - unless breadcrumb.equal?(@breadcrumbs.last)
+      ,
+  ]
+  }

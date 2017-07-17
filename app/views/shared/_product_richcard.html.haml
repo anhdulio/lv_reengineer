@@ -1,0 +1,24 @@
+%script{:type => "application/ld+json"}
+  [
+  - @contents.each do |product|
+    - if I18n.locale == :en
+      - @price = product.latest_price*1000/@ex[:latest]
+      - @currency = "USD"
+    - else
+      - @price = product.latest_price
+      - @currency = "VND"
+    {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": "#{product.title}",
+    "image": "#{product.main_image}",
+    "description": "#{product.short}",
+    "offers": {
+    "@type": "Offer",
+    "price": "#{@price}",
+    "priceCurrency": "#{@currency}"
+    }
+    }
+    - unless product.equal?(@contents.last)
+      ,
+  ]

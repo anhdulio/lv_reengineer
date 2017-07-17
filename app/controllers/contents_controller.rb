@@ -31,6 +31,10 @@ class ContentsController < ApplicationController
     else
       render file: "#{Rails.root}/public/404"
     end
+    breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
+    breadcrumb2 = Breadcrumb.new("http://#{request.host}#{@menubar[:menu][:abouts][:url]}", @menubar[:menu][:abouts][:title], "2")
+    breadcrumb3 = Breadcrumb.new(content_url(contents_type, @content), @content.title , "3")
+    @breadcrumbs = [breadcrumb1, breadcrumb2, breadcrumb3]
   end
 
   def new
@@ -74,6 +78,10 @@ class ContentsController < ApplicationController
 
   def set_content
     @content = Content.friendly.find(params[:id])
+    if @content.type == "Product"
+      @content.update_product_price
+      @ex = { latest: Price.get_latest_exchange, l7d: Price.get_l7d_exchange }
+    end
   end
 
   def content_params
