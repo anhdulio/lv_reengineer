@@ -59,6 +59,7 @@ class WebsiteController < ApplicationController
     breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
     breadcrumb2 = Breadcrumb.new("http://#{request.host}#{@menubar[:menu][:abouts][:url]}", @menubar[:menu][:abouts][:title], "2")
     @breadcrumbs = [breadcrumb1, breadcrumb2]
+    @blog_richcard = true
     render 'contents'
   end
 
