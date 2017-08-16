@@ -312,7 +312,31 @@
       }
     }
   }
-  .caption.info-mobile {
+  .caption.info-mobile-left {
+    bottom:0%;
+    right:auto;
+    top: auto;
+    left: 2%;
+    width:auto;
+    height: 100%;
+    .valign-wrapper {
+      flex-direction: column;
+      height: 100%;
+      align-items: flex-start;
+      justify-content: center;
+      .card {
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 80%;
+        .card-content {
+          padding: 6px;
+        }
+        .card-title {
+          @extend h5;
+        }
+      }
+    }
+  }
+  .caption.info-mobile-right {
     bottom:0%;
     right:auto;
     top: auto;
