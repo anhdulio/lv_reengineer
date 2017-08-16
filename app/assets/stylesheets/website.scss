@@ -249,6 +249,12 @@
     margin-top: 10px;
   }
 }
+
+#addresses {
+  .card {
+    height: 160px;
+  }
+}
 // Modal
 .modal-overlay {
   background-color: $secondary-color
