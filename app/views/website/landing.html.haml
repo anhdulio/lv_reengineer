@@ -1,14 +1,48 @@
 #landing.slider.fullscreen
   %ul.slides
     %li
-      %img{:src => "http://storage.googleapis.com/singular-pixel-4346/Public/landing1.jpg"}/
+      %img{src: 'http://storage.googleapis.com/singular-pixel-4346/Public/landing1.jpg', alt: 'gao chen com'}/
       .caption.first-text
         %blockquote
           %h3
             Gạo sạch
             %br chén cơm ngon
+      .caption.info-desktop.hide-on-small-only
+        .valign-wrapper
+          .card
+            .card-content
+              .card-title
+                = link_to 'Gạo Dẻo Chén cơm', 'http://locvanrice.com/products/contents/gao-chen-com' , target: '_blank', class: 'white-text'
+              Gạo Dẻo Chén cơm được chế biến từ hạt lúa ngắn ngày của bà con vùng Sóc Trăng - Trà Vinh. Hạt cơm dẻo kết dính vào nhau cùng với vị thơm ngọt tạo cảm giác ngon miệng.
+          .card
+            .card-content
+              .card-title
+                = link_to 'Gạo Mềm Chén cơm', 'http://locvanrice.com/products/contents/gao-mem-chen-com' , class: 'white-text', target: '_blank'
+              Gạo Mềm Chén cơm được chế biến từ hạt lúa ngắn ngày của bà con vùng tứ giác Long Xuyên. Hạt cơm mềm, vị ngọt có hương thơm nhẹ dễ chịu và không bị khô khi để nguội.
+          .card
+            .card-content
+              .card-title
+                = link_to 'Gạo Xốp Chén cơm', 'http://locvanrice.com/products/contents/gao-xop-chen-com' , class: 'white-text', target: '_blank'
+              Gạo Xốp Chén cơm được chế biến từ hạt lúa mùa 6 tháng của vùng biên giới. Hạt cơm nở xốp và không dính vào nhau tạo cảm giác khoái khẩu khi nhai.
+      .container.caption.info-mobile-left.hide-on-med-and-up
+        .valign-wrapper
+          .card
+            .card-content
+              .card-title
+                = link_to 'Gạo Dẻo Chén cơm', 'http://locvanrice.com/products/contents/gao-chen-com' , target: '_blank', class: 'white-text'
+              Gạo Dẻo Chén cơm được chế biến từ hạt lúa ngắn ngày của bà con vùng Sóc Trăng - Trà Vinh. Hạt cơm dẻo kết dính vào nhau cùng với vị thơm ngọt tạo cảm giác ngon miệng.
+          .card
+            .card-content
+              .card-title
+                = link_to 'Gạo Mềm Chén cơm', 'http://locvanrice.com/products/contents/gao-mem-chen-com' , class: 'white-text', target: '_blank'
+              Gạo Mềm Chén cơm được chế biến từ hạt lúa ngắn ngày của bà con vùng tứ giác Long Xuyên. Hạt cơm mềm, vị ngọt có hương thơm nhẹ dễ chịu và không bị khô khi để nguội.
+          .card
+            .card-content
+              .card-title
+                = link_to 'Gạo Xốp Chén cơm', 'http://locvanrice.com/products/contents/gao-xop-chen-com' , class: 'white-text', target: '_blank'
+              Gạo Xốp Chén cơm được chế biến từ hạt lúa mùa 6 tháng của vùng biên giới. Hạt cơm nở xốp và không dính vào nhau tạo cảm giác khoái khẩu khi nhai.
       .caption.buy
-        %a.btn-large.pulse.primary-background.hide-on-small-only{:href => "http://ho.lazada.vn/SHRvDd"}
+        %a.btn-large.pulse.primary-background.hide-on-small-only{:href => "http://ho.lazada.vn/SHSiic"}
           %i.material-icons.left> shopping_basket
           150,000 / 10kgs
         %a.btn.pulse.primary-background.hide-on-med-and-up{:href => "http://ho.lazada.vn/SHRvEA?sku=OE680WNAA4UQZ2VNAMZ-8942792&redirect=http%3A%2F%2Fho.lazada.vn%2FSHRvDX%3Furl%3Dhttp%253A%252F%252Fwww.lazada.vn%252Fgao-deo-chen-com-10-kgs-8153102.html%253foffer_id%253D%257Boffer_id%257D%2526affiliate_id%253D%257Baffiliate_id%257D%2526offer_name%253D%257Boffer_name%257D_%257Boffer_file_id%257D%2526affiliate_name%253D%257Baffiliate_name%257D%2526transaction_id%253D%257Btransaction_id%257D"}
@@ -18,10 +52,10 @@
         %a.waves-effect.waves-light.btn.primary-background
           >>>
     %li
-      %img{:src => "http://storage.googleapis.com/singular-pixel-4346/Public/landing-d.jpg", class: "hide-on-small-only"}/
-      %img{:src => "http://storage.googleapis.com/singular-pixel-4346/Public/landing-m.jpg", class: "hide-on-med-and-up"}/
+      %img{src: "http://storage.googleapis.com/singular-pixel-4346/Public/landing-d.jpg", class: "hide-on-small-only", alt: 'gao chen com'}/
+      %img{src: "http://storage.googleapis.com/singular-pixel-4346/Public/landing-m.jpg", class: "hide-on-med-and-up", alt: 'gao chen com'}/
       .caption.buy
-        %a.btn-large.pulse.secondary-background.hide-on-small-only{:href => "http://ho.lazada.vn/SHRvDd"}
+        %a.btn-large.pulse.secondary-background.hide-on-small-only{:href => "http://ho.lazada.vn/SHSiic"}
           %i.material-icons.left> shopping_basket
           150,000 / 10kgs
         %a.btn.pulse.secondary-background.hide-on-med-and-up{:href => "http://ho.lazada.vn/SHRvEA?sku=OE680WNAA4UQZ2VNAMZ-8942792&redirect=http%3A%2F%2Fho.lazada.vn%2FSHRvDX%3Furl%3Dhttp%253A%252F%252Fwww.lazada.vn%252Fgao-deo-chen-com-10-kgs-8153102.html%253foffer_id%253D%257Boffer_id%257D%2526affiliate_id%253D%257Baffiliate_id%257D%2526offer_name%253D%257Boffer_name%257D_%257Boffer_file_id%257D%2526affiliate_name%253D%257Baffiliate_name%257D%2526transaction_id%253D%257Btransaction_id%257D"}
@@ -34,8 +68,15 @@
         .valign-wrapper
           .card
             .card-content
-              .card-title Gạo dẻo, mềm, thơm
-              Hạt gạo chén cơm có màu trắng trong và vị thơm nhẹ. Khi nấu với tỷ lệ <b>10 gạo : 11 nước</b> cho hạt cơm dẻo, mềm, vẫn ngon khi để nguội.
+              .card-title Thương hiệu Gạo Chén cơm
+              %span
+                Gạo Chén cơm được tạo ra với mong muốn đem hạt gạo đúng chất đến tay người tiêu dùng.
+                %b= link_to 'Xốp', 'http://locvanrice.com/products/contents/gao-xop-chen-com', class: 'secondary-text', target: '_blank'
+                ,
+                %b= link_to 'Dẻo', 'http://locvanrice.com/products/contents/gao-chen-com', class: 'secondary-text', target: '_blank'
+                ,
+                %b= link_to 'Mềm', 'http://locvanrice.com/products/contents/gao-mem-chen-com', class: 'secondary-text', target: '_blank'
+                , ba dòng sản phẩm với ba đặc trưng khác nhau của hạt gạo mang đến sự lựa chọn tuyệt với cho bữa cơm của mỗi gia đình.
           .card
             .card-content
               .card-title Chứng nhận VSATTP
@@ -44,13 +85,19 @@
             .card-content
               .card-title Giao gạo tận tay
               Hiện tại, chúng tôi hỗ trợ giao gạo miễn phí tận tay người tiêu dùng trong địa bàn Thành Phố Hồ Chí Minh trong tối đa 2 ngày làm việc.
-
-      .container.caption.info-mobile.hide-on-med-and-up
+      .container.caption.info-mobile-right.hide-on-med-and-up
         .valign-wrapper
           .card
             .card-content
-              .card-title Gạo dẻo, mềm, thơm
-              Hạt gạo chén cơm có màu trắng trong và vị thơm nhẹ. Khi nấu với tỷ lệ <b>10 gạo : 11 nước</b> cho hạt cơm dẻo, mềm, vẫn ngon khi để nguội.
+              .card-title Thương hiệu Gạo Chén cơm
+              %span
+                Gạo Chén cơm được tạo ra với mong muốn đem hạt gạo đúng chất đến tay người tiêu dùng.
+                %b= link_to 'Xốp', 'http://locvanrice.com/products/contents/gao-xop-chen-com', class: 'secondary-text', target: '_blank'
+                ,
+                %b= link_to 'Dẻo', 'http://locvanrice.com/products/contents/gao-chen-com', class: 'secondary-text', target: '_blank'
+                ,
+                %b= link_to 'Mềm', 'http://locvanrice.com/products/contents/gao-mem-chen-com', class: 'secondary-text', target: '_blank'
+                , ba dòng sản phẩm với ba đặc trưng khác nhau của hạt gạo mang đến sự lựa chọn tuyệt với cho bữa cơm của mỗi gia đình.
           .card
             .card-content
               .card-title Chứng nhận VSATTP
@@ -59,5 +106,3 @@
             .card-content
               .card-title Giao gạo tận tay
               Hiện tại, chúng tôi hỗ trợ giao gạo miễn phí tận tay người tiêu dùng trong địa bàn Thành Phố Hồ Chí Minh trong tối đa 2 ngày làm việc.
-
-  = render 'shared/contact_modal'
