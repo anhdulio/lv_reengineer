@@ -25,7 +25,7 @@ class ContentsController < ApplicationController
     #@header_info = { title: @content.title, subtitle: @content.short }
     if @content.publish?
       @meta_title = @content.title
-      @meta_description= @content.title
+      @meta_description= @content.short
       @header_info = { title: @content.title, subtitle: '' }
       @contact_widget = true
     else

@@ -9,4 +9,7 @@
   img {
     @extend .responsive-img
   }
+  a, a:hover, a:visited, a:active, a:focus {
+    color: $secondary-color;
+  }
 }

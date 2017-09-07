@@ -17,7 +17,7 @@
                                     = link_to(content_path(content.type.tableize(), content.friendly_id))  do
                                         = image_tag content.main_image
                                 .card-content
-                                    %span.card-title= content.title
+                                    %span.card-title.truncate= content.title
                                     - if content.type == "Product"
                                         - if I18n.locale == :en
                                             %blockquote= number_to_currency(content.latest_price*1000/@ex[:latest], precision: 0, unit: "USD/tons", format: "%n %u")
