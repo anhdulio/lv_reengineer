@@ -190,6 +190,9 @@
   .card.large > .card-image {
     max-height: 37.5%;
   }
+  .card.large.card-content {
+    max-height: 60%;
+  }
 }
 
 //shared/Self
