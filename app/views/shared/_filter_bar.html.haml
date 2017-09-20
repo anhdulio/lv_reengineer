@@ -12,12 +12,12 @@
                 - @contents.each do |content|
                     - if content.category.id == cat.id
                         .col.l4.m6.s12
-                            .card.medium.hoverable
+                            .card.large.hoverable
                                 .card-image
                                     = link_to(content_path(content.type.tableize(), content.friendly_id))  do
                                         = image_tag content.main_image
                                 .card-content
-                                    %span.card-title.truncate= content.title
+                                    %span.card-title= content.title
                                     - if content.type == "Product"
                                         - if I18n.locale == :en
                                             %blockquote= number_to_currency(content.latest_price*1000/@ex[:latest], precision: 0, unit: "USD/tons", format: "%n %u")
