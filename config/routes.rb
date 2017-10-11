@@ -19,14 +19,13 @@ Rails.application.routes.draw do
   get 'market' => 'website#market', as: 'emarket'
   get 'contact' => 'website#contact', as: 'econtact'
 
-
   #VN Routing
   get 'chia-se-gao' => 'website#blogs', as: 'vblogs'
   get 'gao-loc-van' => 'website#abouts', as: 'vabouts'
   get 'san-pham-gao' => 'website#products', as: 'vproducts'
   get 'thi-truong-gao' => 'website#market', as: 'vmarket'
   get 'lien-he' => 'website#contact', as: 'vcontact'
-  get 'gao-chen-com' => 'website#landing', as: 'landing'
+  get 'gao-chen-com' => 'website#gcc', as: 'gcc'
 
   scope '/:content_type' do
     resources :contents do

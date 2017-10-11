@@ -13,6 +13,7 @@
             add eblogs_path
             add emarket_path
             add econtact_path
+            add gcc_path
             Content.locale(:en).find_each do |content|
                 case content.type
                 when "Product"
@@ -29,7 +30,7 @@
             add vblogs_path
             add vmarket_path
             add vcontact_path
-            add landing_path
+            add gcc_path
             Content.locale(:vi).find_each do |content|
                 case content.type
                 when "Product"

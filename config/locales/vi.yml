@@ -3,23 +3,26 @@ vi:
   website:
     breadcrumb:
       home: 'Gạo Lộc Vân'
-      landing: 'Gạo Chén Cơm'
+      gcc: 'Gạo Chén Cơm'
     title: Gạo Lộc Vân
     error:
       notfound: Xin lỗi, chúng tôi không thể tìm thấy trang bạn yêu cầu.
       success: Tin nhắn đã được gửi đi, chúng tôi sẽ liên hệ trong vòng 8 giờ tới.
       internal: Xin lỗi, có lỗi xảy ra ở trang của chúng tôi. Xin vui lòng thử lại sau.
     buynow: Liên hệ báo giá
-    landing:
-      meta_title: Gạo chén cơm
-      meta_desc: Gạo sạch chén cơm ngon
+    gcc:
+      meta_title: Thương hiệu gạo chén cơm
+      meta_desc: Gạo Chén cơm được tạo ra với mong muốn đem hạt gạo sạch đúng chất đến tay người tiêu dùng.
+      title: Gạo chén cơm
+      subtitle: Đem hạt gạo sạch đúng chất đến tay người tiêu dùng.
     menubar:
       logo: gao trang loc van
       market: Thị trường
       about: Giới thiệu
-      blog: Cẩm nang gạo
+      blog: Cẩm nang
       product: Sản phẩm
       contact: Liên hệ
+      gcc: Gạo Chén cơm
     filterbar:
       spec: Đặc tính
       usage: Công dụng

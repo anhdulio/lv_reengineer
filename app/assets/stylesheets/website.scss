@@ -17,6 +17,21 @@
 .secondary-text {
   color: $secondary-color;
 }
+
+// Define brand color/text 
+.gcc-deo {
+  background-color: #8CC63F;
+}
+.gcc-mem {
+  background-color: #FFFFFF;
+}
+.gcc-xop {
+  background-color: #FFC107;
+}
+.gcc-thom {
+  background-color: #F42756;
+}
+
 // Header with background pattern
 .header {
   min-height: 40vh;
@@ -364,6 +379,21 @@
           @extend h5;
         }
       }
+    }
+  }
+}
+
+// Gao chen com
+#gcc {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  .card {
+    flex-basis: 1 1 auto;
+    min-width: 320px;
+    max-width: 24vw;
+    .card-title {
+      text-decoration: underline;
     }
   }
 }

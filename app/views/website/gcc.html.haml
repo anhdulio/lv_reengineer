@@ -1,0 +1,29 @@
+#homepage-header
+  = render 'shared/header'
+  %p.center-align
+    %a.btn.blue{href: 'http://ho.lazada.vn/SHSiic'}
+      %i.material-icons.left> shopping_basket
+      Mua gạo online
+#gcc
+  .card.gcc-thom
+    .card-content.white-text
+      %span.card-title
+        = link_to 'Gạo Thơm VietGAP Chén cơm', 'http://locvanrice.com/products/contents/gao-thom-vietgap-chen-com' , class: 'white-text', target: '_blank'              
+      %p Gạo thơm VietGAP Chén cơm là sản phẩm gạo ngon an toàn trong dự án nông nghiệp giữa Gạo Lộc Vân và các hộ nông dân trong hợp tác xã Hòa Hưng xứ Châu Thành tỉnh Đồng Tháp.
+  .card.gcc-xop
+    .card-content.white-text
+      %span.card-title
+        = link_to 'Gạo Xốp Chén cơm', 'http://locvanrice.com/products/contents/gao-xop-chen-com' , class: 'white-text', target: '_blank'
+      %p Gạo Xốp Chén cơm được chế biến từ hạt lúa mùa 6 tháng của vùng biên giới. Hạt cơm nở xốp và không dính vào nhau tạo cảm giác khoái khẩu khi nhai.
+  .card.gcc-deo
+    .card-content.white-text
+      %span.card-title
+        = link_to 'Gạo Dẻo Chén cơm', 'http://locvanrice.com/products/contents/gao-deo-chen-com' , class: 'white-text', target: '_blank'              
+      %p Gạo Dẻo Chén cơm được chế biến từ hạt lúa ngắn ngày của bà con vùng Sóc Trăng - Trà Vinh. Hạt cơm dẻo kết dính vào nhau cùng với vị thơm ngọt tạo cảm giác ngon miệng.
+  .card.gcc-mem
+    .card-content
+      %span.card-title
+        = link_to 'Gạo Mềm Chén cơm', 'http://locvanrice.com/products/contents/gao-mem-chen-com' , class: 'black-text', target: '_blank'
+      %p Gạo Mềm Chén cơm được chế biến từ hạt lúa ngắn ngày của bà con vùng tứ giác Long Xuyên. Hạt cơm mềm, vị ngọt có hương thơm nhẹ dễ chịu và không bị khô khi để nguội.
+#homepage-footer
+  = render 'shared/footer'
