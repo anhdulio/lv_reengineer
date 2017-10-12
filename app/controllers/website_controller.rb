@@ -30,9 +30,8 @@ class WebsiteController < ApplicationController
   def gcc
     @meta_title = t('website.gcc.meta_title')
     @meta_description= t('website.gcc.meta_desc')
-
     @header_info = { title: t('website.gcc.title'), subtitle: t('website.gcc.subtitle') }
-    
+
     breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
     breadcrumb2 = Breadcrumb.new(gcc_url, t('website.breadcrumb.gcc'), "2")
     @breadcrumbs = [breadcrumb1, breadcrumb2]
