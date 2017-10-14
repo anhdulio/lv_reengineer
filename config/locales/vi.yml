@@ -9,7 +9,7 @@ vi:
       notfound: Xin lỗi, chúng tôi không thể tìm thấy trang bạn yêu cầu.
       success: Tin nhắn đã được gửi đi, chúng tôi sẽ liên hệ trong vòng 8 giờ tới.
       internal: Xin lỗi, có lỗi xảy ra ở trang của chúng tôi. Xin vui lòng thử lại sau.
-    buynow: Liên hệ báo giá
+    buynow: Liên hệ
     gcc:
       meta_title: Thương hiệu gạo chén cơm
       meta_desc: Gạo Chén cơm được tạo ra với mong muốn đem hạt gạo sạch đúng chất đến tay người tiêu dùng.

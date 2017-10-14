@@ -23,6 +23,7 @@ class ContentsController < ApplicationController
 
   def show
     #@header_info = { title: @content.title, subtitle: @content.short }
+    @intendbox = true
     if @content.publish?
       @meta_title = @content.title
       @meta_description= @content.short

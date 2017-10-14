@@ -8,6 +8,7 @@ class WebsiteController < ApplicationController
   end
 
   def homepage
+    @intendbox = true
     @meta_title = t('website.homepage.header.title')
     @meta_description= t('website.homepage.header.subtitle')
 
@@ -28,6 +29,7 @@ class WebsiteController < ApplicationController
   end
 
   def gcc
+    @intendbox = true
     @meta_title = t('website.gcc.meta_title')
     @meta_description= t('website.gcc.meta_desc')
     @header_info = { title: t('website.gcc.title'), subtitle: t('website.gcc.subtitle') }
@@ -66,6 +68,7 @@ class WebsiteController < ApplicationController
   end
 
   def blogs
+    @intendbox = true
     @meta_title = t('website.blogs.header.title')
     @meta_description= t('website.blogs.header.subtitle')
 
@@ -82,6 +85,7 @@ class WebsiteController < ApplicationController
   end
 
   def products
+    @intendbox = true
     @meta_title = t('website.products.header.title')
     @meta_description= t('website.products.header.subtitle')
     @product_richcard = true

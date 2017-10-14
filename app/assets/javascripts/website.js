@@ -30,5 +30,4 @@ $(document).on('turbolinks:load', function() {
 
   // Update all field materialize
   Materialize.updateTextFields();
-
 })

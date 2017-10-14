@@ -27,4 +27,6 @@
     %p.alert= alert
     - if @breadcrumbs
       = render 'shared/breadcrumbs'
-    =render 'shared/corporate_contact'
+    = render 'shared/corporate_contact'
+    - if @intendbox 
+      = render 'shared/intendbox'
