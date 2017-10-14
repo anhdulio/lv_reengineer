@@ -21,7 +21,9 @@ class WebsiteController < ApplicationController
 
     Product.locale(I18n.locale).find_each do |product|
       product.update_product_price
-      @products << product
+      if product.category.en != "Good rice"
+        @products << product
+      end
     end
 
     breadcrumb1 = Breadcrumb.new(root_url, t('website.breadcrumb.home'), "1")
@@ -117,7 +119,9 @@ class WebsiteController < ApplicationController
     @breadcrumbs = [breadcrumb1, breadcrumb2]
     Product.locale(I18n.locale).find_each do |product|
       product.update_product_price
-      @products << product
+      if product.category.en != "Good rice"
+        @products << product
+      end
     end
   end
 
