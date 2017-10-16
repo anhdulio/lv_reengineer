@@ -23,6 +23,3 @@ namespace :assets do
       end
     end
   end
-  
-  # config/deploy.rb
-  after 'deploy:updated', 'assets:precompile'
