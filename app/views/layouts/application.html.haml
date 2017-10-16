@@ -19,6 +19,7 @@
     = render 'shared/google_analytic'
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = javascript_pack_tag 'hello_vue'
     = csrf_meta_tags
   %body
     = yield
