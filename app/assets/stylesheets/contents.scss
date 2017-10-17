@@ -3,9 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #content {
-  p {
-    @extend .flow-text
-  };
   img {
     @extend .responsive-img
   }
