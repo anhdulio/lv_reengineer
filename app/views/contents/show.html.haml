@@ -14,8 +14,8 @@
         %blockquote= "Giá Gạo hôm nay : " + number_to_currency(@content.latest_price, precision: 0, unit: "đ/ký", format: "%n %u")
     - if @content.respond_to?(:spec)
       %blockquote= t('website.filterbar.spec') + " : " + @content.spec.downcase.gsub(/\A,/,"").gsub(/,/," , ")
-    - if @content.respond_to?(:usage)
-      %blockquote= t('website.filterbar.usage') + " : " + @content.usage.downcase.gsub(/\A,/,"").gsub(/,/," , ")
+    -# - if @content.respond_to?(:usage)
+    -#   %blockquote= t('website.filterbar.usage') + " : " + @content.usage.downcase.gsub(/\A,/,"").gsub(/,/," , ")
     = @content.body.html_safe
     %p.center-align
       %a.waves-effect.pulse.waves-light.btn{:href => "#contact-modal"}= t('website.buynow')

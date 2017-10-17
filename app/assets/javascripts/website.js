@@ -1,4 +1,5 @@
 $(document).on('turbolinks:load', function() {
+  $("body").removeClass("md-theme-default");
   get_full_chips('products','usage');
   get_full_chips('products','spec');
   $(".dropdown-button").dropdown();
