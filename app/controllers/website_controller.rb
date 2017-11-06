@@ -33,7 +33,7 @@ class WebsiteController < ApplicationController
   def gcc
     @intendbox = true
     @gcc = get_gcc
-    @analytic = 'visit_lazada'
+    @analytics = ['visit_lazada','buy_gcc']
     @meta_title = t('website.gcc.meta_title')
     @meta_description= t('website.gcc.meta_desc')
     @header_info = { title: t('website.gcc.title'), subtitle: t('website.gcc.subtitle') }
@@ -161,7 +161,7 @@ class WebsiteController < ApplicationController
         image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-xop.jpg',
         seo: 'Gao xop chen com',
         view: 'http://locvanrice.com/products/contents/gao-xop-chen-com',
-        shop: 'http://ho.lazada.vn/SHTOv'
+        shop: 'http://ho.lazada.vn/SHWrs0'
       },
       deo: {
         title: 'Gạo Dẻo Chén Cơm',

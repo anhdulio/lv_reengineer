@@ -26,26 +26,11 @@
         viewmore: 'Xem thêm'
       }
     },
-    methods: {
-        gtag_report_conversion: function (url) {
-          var callback = function () {
-            if (typeof(url) != 'undefined') {
-              window.location = url;
-            }
-          };
-          gtag('event', 'conversion', {
-              'send_to': 'AW-848009396/6mDPCIKIq3gQtLGulAM',
-              'transaction_id': '',
-              'event_callback': callback
-          });
-          return false;
+    computed: {
+      buygcc: function () {
+        return "return gtag_report_conversion_buygcc('" + this.shop + "');"
       }
-    },
-  computed: {
-    buygcc: function () {
-      return "return gtag_report_conversion('" + this.shop + "');"
     }
-  }
   }
 </script>
 

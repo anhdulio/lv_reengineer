@@ -16,8 +16,9 @@
     %link{:href => "/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
     / google analytic
     = render 'analytics/global_site_tag'
-    - if @analytic
-      = render "analytics/#{@analytic}"
+    - if @analytics
+      - @analytics.each do |analytic|
+        = render "analytics/#{analytic}"    
 
     = render 'shared/tawk'
     // Vue JS
