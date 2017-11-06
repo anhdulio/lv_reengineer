@@ -14,7 +14,12 @@
     %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon", :sizes => "180x180"}/
     %link{:href => "/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
     %link{:href => "/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    / google analytic
+    = render 'analytics/global_site_tag'
+    - if @analytic
+      = render "analytics/#{@analytic}"
 
+    = render 'shared/tawk'
     // Vue JS
     = javascript_pack_tag 'gcc'
     = stylesheet_pack_tag 'gcc'

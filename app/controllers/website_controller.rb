@@ -33,6 +33,7 @@ class WebsiteController < ApplicationController
   def gcc
     @intendbox = true
     @gcc = get_gcc
+    @analytic = 'visit_lazada'
     @meta_title = t('website.gcc.meta_title')
     @meta_description= t('website.gcc.meta_desc')
     @header_info = { title: t('website.gcc.title'), subtitle: t('website.gcc.subtitle') }

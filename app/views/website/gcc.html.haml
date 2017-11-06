@@ -1,9 +1,9 @@
 #homepage-header
   = render 'shared/header'
 %p.center-align
-  %a.btn.blue{href: 'http://ho.lazada.vn/SHSiic', target: '_blank'}
+  %a.btn.red.pulse{href: 'http://ho.lazada.vn/SHSiic', target: '_blank', onclick: "return gtag_report_conversion_buygcc('http://ho.lazada.vn/SHSiic');"}
     %i.material-icons.left> shopping_basket
-    Lazada - khuyến mãi cuối năm
+    Mua ngay - miễn phí vận chuyển
 //Vue App
 - if @gcc  
   -# = content_tag(:div, nil, id: 'gcc-data', data: {products: @gcc})

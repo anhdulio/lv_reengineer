@@ -11,7 +11,7 @@
       <md-card-content>{{ desc }}</md-card-content>
       <md-card-actions>
         <md-button class="" :href='view'>{{viewmore}}</md-button>
-        <md-button class="md-warn" :href='shop'>{{buynow}}</md-button>
+        <md-button class="md-warn" :href='shop' :onclick='buygcc'>{{buynow}}</md-button>
       </md-card-actions>
     </md-card>
   </div>
@@ -25,7 +25,27 @@
         buynow: "Mua ngay",
         viewmore: 'Xem thêm'
       }
+    },
+    methods: {
+        gtag_report_conversion: function (url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-848009396/6mDPCIKIq3gQtLGulAM',
+              'transaction_id': '',
+              'event_callback': callback
+          });
+          return false;
+      }
+    },
+  computed: {
+    buygcc: function () {
+      return "return gtag_report_conversion('" + this.shop + "');"
     }
+  }
   }
 </script>
 
