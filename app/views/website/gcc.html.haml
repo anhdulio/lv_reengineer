@@ -6,13 +6,12 @@
     Mua ngay - miễn phí vận chuyển
 //Vue App
 - if @gcc  
-  -# = content_tag(:div, nil, id: 'gcc-data', data: {products: @gcc})
   #vue-gcc
     %md-layout{'md-gutter' => '16','md-align' => 'center','md-vertical-align' => 'center'}
       - @gcc.each do |key, value|
         %md-layout{'md-flex-xsmall' => '95', 'md-flex-small' => '35', 'md-flex-medium' => '35'}
           %product-card{key: key, title: value[:title],
-           price: value[:price], desc: value[:description],
+           price: value[:price], saleprice: value[:saleprice], desc: value[:description],
             image: value[:image], seo: value[:seo], view: value[:view], shop: value[:shop]}
 //Vue App
 #homepage-footer

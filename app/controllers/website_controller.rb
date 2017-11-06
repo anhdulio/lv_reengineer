@@ -148,6 +148,7 @@ class WebsiteController < ApplicationController
       thom: {
         title: 'Gạo Thơm VietGAP',
         price: '25,000 VND',
+        saleprice: '19,000 VND',
         description: 'Gạo thơm VietGAP Chén cơm là sản phẩm gạo ngon an toàn trong dự án nông nghiệp giữa Gạo Lộc Vân và các hộ nông dân trong hợp tác xã Hòa Hưng xứ Châu Thành tỉnh Đồng Tháp.',
         image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-thom.jpg',
         seo: 'Gao thom VietGAP chen com',
@@ -157,7 +158,8 @@ class WebsiteController < ApplicationController
       xop: {
         title: 'Gạo Xốp Chén Cơm',
         price: '15,000 VND',
-        description: 'Gạo Xốp Chén cơm được chế biến từ hạt lúa mùa 6 tháng của vùng biên giới. Hạt cơm nở xốp và không dính vào nhau tạo cảm giác khoái khẩu khi nhai.',
+        saleprice: '13,000 VND',
+        description: 'Gạo Xốp Chén cơm được chế biến từ hạt lúa mùa 6 tháng của vùng biên giới phía nam giáp với nước bạn Campuchia. Hạt cơm nở xốp và không dính vào nhau tạo cảm giác khoái khẩu khi nhai.',
         image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-xop.jpg',
         seo: 'Gao xop chen com',
         view: 'http://locvanrice.com/products/contents/gao-xop-chen-com',
@@ -166,6 +168,7 @@ class WebsiteController < ApplicationController
       deo: {
         title: 'Gạo Dẻo Chén Cơm',
         price: '15,000 VND',
+        saleprice: '13,000 VND',
         description: 'Gạo Dẻo Chén cơm được chế biến từ hạt lúa ngắn ngày của bà con vùng Sóc Trăng - Trà Vinh. Hạt cơm dẻo kết dính vào nhau cùng với vị thơm ngọt tạo cảm giác ngon miệng.',
         image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-deo.jpg',
         seo: 'Gao deo chen com',
@@ -175,6 +178,7 @@ class WebsiteController < ApplicationController
       mem: {
         title: 'Gạo Mềm Chén Cơm',
         price: '15,000 VND',
+        saleprice: '13,000 VND',
         description: 'Gạo Mềm Chén cơm được chế biến từ hạt lúa ngắn ngày của bà con vùng tứ giác Long Xuyên. Hạt cơm mềm, vị ngọt có hương thơm nhẹ dễ chịu và không bị khô khi để nguội.',
         image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-mem.jpg',
         seo: 'Gao mem chen com',
