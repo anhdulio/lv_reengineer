@@ -145,16 +145,6 @@ class WebsiteController < ApplicationController
 
   def get_gcc
     gcc = {
-      thom: {
-        title: 'Gạo Thơm VietGAP',
-        price: '25,000 VND',
-        saleprice: '19,000 VND',
-        description: 'Gạo thơm VietGAP Chén cơm là sản phẩm gạo ngon an toàn trong dự án nông nghiệp giữa Gạo Lộc Vân và các hộ nông dân trong hợp tác xã Hòa Hưng xứ Châu Thành tỉnh Đồng Tháp.',
-        image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-thom.jpg',
-        seo: 'Gao thom VietGAP chen com',
-        view: 'http://locvanrice.com/products/contents/gao-thom-vietgap-chen-com',
-        shop: 'http://ho.lazada.vn/SHVAKD'
-      },
       xop: {
         title: 'Gạo Xốp Chén Cơm',
         price: '15,000 VND',
@@ -163,7 +153,7 @@ class WebsiteController < ApplicationController
         image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-xop.jpg',
         seo: 'Gao xop chen com',
         view: 'http://locvanrice.com/products/contents/gao-xop-chen-com',
-        shop: 'http://ho.lazada.vn/SHWrs0'
+        shop: 'http://www.lazada.vn/gao-xop-lua-mua-chen-com-ngon-10-kgs-10577348.html?spm=a2o7f.10605548.0.0.64f164fcZf1bg3'
       },
       deo: {
         title: 'Gạo Dẻo Chén Cơm',
@@ -173,7 +163,7 @@ class WebsiteController < ApplicationController
         image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-deo.jpg',
         seo: 'Gao deo chen com',
         view: 'http://locvanrice.com/products/contents/gao-chen-com',
-        shop: 'http://ho.lazada.vn/SHTOwG'
+        shop: 'http://www.lazada.vn/gao-deo-chen-com-ngon-10-kgs-8153102.html?spm=a2o7f.10605548.0.0.64f164fcZf1bg3'
       },
       mem: {
         title: 'Gạo Mềm Chén Cơm',
@@ -183,8 +173,18 @@ class WebsiteController < ApplicationController
         image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-mem.jpg',
         seo: 'Gao mem chen com',
         view: 'http://locvanrice.com/products/contents/gao-mem-chen-com',
-        shop: 'http://ho.lazada.vn/SHTOwJ'
+        shop: 'http://www.lazada.vn/gao-mem-chen-com-ngon-10-kgs-10579938.html?spm=a2o7f.10605548.0.0.64f164fcZf1bg3'
       },
+      thom: {
+        title: 'Gạo Thơm VietGAP',
+        price: '25,000 VND',
+        saleprice: '19,000 VND',
+        description: 'Gạo thơm VietGAP Chén cơm là sản phẩm gạo ngon an toàn trong dự án nông nghiệp giữa Gạo Lộc Vân và các hộ nông dân trong hợp tác xã Hòa Hưng xứ Châu Thành tỉnh Đồng Tháp.',
+        image: 'http://storage.googleapis.com/singular-pixel-4346/Public/gcc-thom.jpg',
+        seo: 'Gao thom VietGAP chen com',
+        view: 'http://locvanrice.com/products/contents/gao-thom-vietgap-chen-com',
+        shop: 'http://ho.lazada.vn/SHVAKD'
+      }
     }
   end
 
