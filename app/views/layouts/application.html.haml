@@ -24,7 +24,14 @@
     // Vue JS
     = javascript_pack_tag 'gcc'
     = stylesheet_pack_tag 'gcc'
-
+    
+    %link{:href => "/manifest.json", :rel => "manifest"}/
+    %meta{:content => "#ffffff", :name => "theme-color"}/
+    = render 'shared/google_analytic'
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    
     / Facebook Pixel Code
     :javascript
       !function(f,b,e,v,n,t,s)
@@ -40,14 +47,6 @@
     %noscript
       %img{:height => "1", :src => "https://www.facebook.com/tr?id=1031000237037737&ev=PageView&noscript=1", :style => "display:none", :width => "1"}/
     / End Facebook Pixel Code
-
-    
-    %link{:href => "/manifest.json", :rel => "manifest"}/
-    %meta{:content => "#ffffff", :name => "theme-color"}/
-    = render 'shared/google_analytic'
-    = stylesheet_link_tag    "application"
-    = javascript_include_tag "application", 'data-turbolinks-track' => true
-    = csrf_meta_tags
   %body
     :javascript
       fbq('track', 'ViewContent');    
