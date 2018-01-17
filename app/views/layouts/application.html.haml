@@ -49,6 +49,8 @@
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    :javascript
+      fbq('track', 'ViewContent');    
     = yield
     = render 'shared/tawk'
     %p.notice= notice
