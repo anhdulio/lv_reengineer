@@ -1,4 +1,6 @@
 $(document).on('turbolinks:load', function() {
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent');   
   $("body").removeClass("md-theme-default");
   get_full_chips('products','usage');
   get_full_chips('products','spec');
